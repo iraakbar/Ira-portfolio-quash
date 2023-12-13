@@ -91,7 +91,7 @@ export default function Home() {
               Selected Work
             </p>
             {workArray.map((work, index) => (
-              <div className="work-card pl-4 pt-10 pb-6 md:py-11 md:pl-20 flex gap-5 flex-col md:flex-row md:justify-between md:items-center items-start bg-[#F9F9FC] rounded-xl">
+              <div key={index} className="work-card pl-4 pt-10 pb-6 md:py-11 md:pl-20 flex gap-5 flex-col md:flex-row md:justify-between md:items-center items-start bg-[#F9F9FC] rounded-xl">
                 <div className="flex flex-col items-start text-start ">
                   <p className="text-gray-600 text-[14px] md:text-[24px] font-semibold mb-1">
                     {work.role}
