@@ -1,24 +1,29 @@
 "use client";
 import React, { useState } from "react";
 
-const headerNavArray = ["Ira Akbar", "Work", "Contact"];
+const headerNavArray = [
+  { label: "Ira Akbar", value: "home" },
+  { label: "Work", value: "work" },
+  { label: "Contact", value: "contact" },
+];
 
-const Header = () => {
-  const [selectedNav, setselectedNav] = useState("Ira Akbar");
+const Header = ({ handleScroll }: any) => {
+  const [selectedNav, setselectedNav] = useState("home");
   return (
-    <div className="absolute top-0 w-full flex justify-between items-center h-[52px] px-4 md:h-[72px] md:px-[120px]">
+    <div className="fixed top-0 w-full flex justify-between items-center h-[52px] px-4 md:h-[72px] md:px-[120px] bg-background/80 backdrop-blur-sm ">
       <div className="hidden md:flex item-center gap-8 ">
         {headerNavArray.map((el, index) => (
           <p
             key={index}
             className={`${
-              selectedNav === el ? "text-black" : "text-[#CFCFDB]"
+              selectedNav === el.value ? "text-black" : "text-[#CFCFDB]"
             } cursor-pointer md:text-2xl md:font-semibold`}
             onClick={(e) => {
-              setselectedNav(el);
+              setselectedNav(el.value);
+              handleScroll(el.value);
             }}
           >
-            {el}
+            {el.label}
           </p>
         ))}
       </div>
