@@ -79,7 +79,7 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2">
+            <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
               Resume
             </button>
           </div>
@@ -91,7 +91,10 @@ export default function Home() {
               Selected Work
             </p>
             {workArray.map((work, index) => (
-              <div key={index} className="work-card pl-4 pt-10 pb-6 md:py-11 md:pl-20 flex gap-5 flex-col md:flex-row md:justify-between md:items-center items-start bg-[#F9F9FC] rounded-xl">
+              <div
+                key={index}
+                className="work-card pl-4 pt-10 pb-6 md:py-11 md:pl-20 flex gap-5 flex-col md:flex-row md:justify-between md:items-center items-start bg-[#F9F9FC] rounded-xl"
+              >
                 <div className="flex flex-col items-start text-start ">
                   <p className="text-gray-600 text-[14px] md:text-[24px] font-semibold mb-1">
                     {work.role}
@@ -106,18 +109,24 @@ export default function Home() {
                   <Link
                     target="_blank"
                     href={work.link}
-                    className="flex px-5 md:px-[18px] py-[10px] justify-center items-center rounded-full border border-solid border-black text-[#4B4B5F] text-[14px] md:text-[24px] font-[500]"
+                    className="flex px-5 md:px-[18px] py-[10px] justify-center items-center rounded-full border border-solid border-[#4B4B5F] text-[#4B4B5F] text-[14px] md:text-[24px] font-[500] hover:bg-[#CFCFDB]"
                   >
                     {work.linkLabel}
                   </Link>
                 </div>
                 <div>
                   <Image
-                    src={work.image}
+                    src={
+                      work.image === "/pulse.png"
+                        ? "/pulse-mob.png"
+                        : work.image
+                    }
                     height={535}
                     width={600}
                     alt={work.company}
-                    className="md:hidden"
+                    className={`${
+                      work.image === "/pulse.png" && "-ml-2"
+                    } md:hidden`}
                   />
                   <Image
                     src={work.image}

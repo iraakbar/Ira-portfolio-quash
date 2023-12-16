@@ -33,7 +33,7 @@ const Header = ({ handleScroll }: any) => {
         Ira Akbar
       </p>
 
-      <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2">
+      <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
         Resume
       </button>
     </div>
