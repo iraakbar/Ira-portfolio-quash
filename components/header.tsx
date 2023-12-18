@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const headerNavArray = [
@@ -32,10 +33,14 @@ const Header = ({ handleScroll }: any) => {
       >
         Ira Akbar
       </p>
-
-      <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
-        Resume
-      </button>
+      <Link
+        href="https://drive.google.com/file/d/1jU5aKsnAp4RvQzb6-BycEK7ZCyIgYzBC/view?usp=drive_link"
+        target="_blank"
+      >
+        <button className="text-white flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
+          Resume
+        </button>
+      </Link>
     </div>
   );
 };

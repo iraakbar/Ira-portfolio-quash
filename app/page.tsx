@@ -46,7 +46,7 @@ const workArray = [
     company: "Bangalore Pulse",
     description:
       "Designed an app for the loyalty program for flyers at Bangalore International Airport with R360.",
-    link: "",
+    link: "https://drive.google.com/file/d/1tfSa-LVLko2tojQZ5EtAylLnc3V66BKr/view?usp=drive_link",
     linkLabel: "Case Study",
     image: "/pulse.png",
   },
@@ -79,9 +79,14 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <button className="flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
-              Resume
-            </button>
+            <Link
+              href="https://drive.google.com/file/d/1jU5aKsnAp4RvQzb6-BycEK7ZCyIgYzBC/view?usp=drive_link"
+              target="_blank"
+            >
+              <button className="text-white flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
+                Resume
+              </button>
+            </Link>
           </div>
         </section>
 
