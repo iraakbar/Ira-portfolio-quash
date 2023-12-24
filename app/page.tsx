@@ -67,14 +67,14 @@ export default function Home() {
         <section id="home">
           <div className="intro min-w-full px-7 py-20 flex flex-col items-start justify-center gap-5 md:gap-8 md:max-w-[895px] md:py-[180px] md:px-20 lg:px-[258px] ">
             <div className="flex flex-col flex-grow items-start justify-center gap-3 md:gap-4 w-full">
-              <p className="text-gray-300 text-2xl md:text-[48px] font-bold">
+              <p className="text-gray-700 text-2xl md:text-[48px] font-bold">
                 Hi! I’m Ira.
               </p>
               <div>
                 <p className="text-gray-700 text-2xl md:text-[48px] font-bold md:leading-[66px]">
                   A Product Designer
                 </p>{" "}
-                <p className="text-gray-700 text-2xl md:text-[48px] font-bold md:leading-[66px]">
+                <p className="text-gray-300 text-2xl md:text-[48px] font-bold md:leading-[66px]">
                   with management skills up her sleeve.
                 </p>
               </div>
