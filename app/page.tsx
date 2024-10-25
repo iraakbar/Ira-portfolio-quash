@@ -6,13 +6,32 @@ import Link from "next/link";
 
 const workArray = [
   {
-    role: "Founding Team",
-    company: "Quash",
+    role: "Founding Designer",
+    company: "Hunar AI",
     description:
-      "Launched a Mobile Testing Platform for cohesive bug reporting.Currently in pre-seed stage with 10 Clients.",
-    link: "https://quashbugs.com/",
-    linkLabel: "Website",
-    image: "/quash.png",
+      "Enhanced the overall candidate experience and refined a recruiter dashboard UX at Hunar AI, an AI powered frontline recruitment platform.",
+    link: "https://www.hunar.ai/",
+    linkLabel: "Case Study",
+    image: "/hunar.svg",
+  },
+  {
+    role: "Product Designer",
+    company: "JIVA AI",
+    description:
+      "Helped building an AI Assistant for Judges in Karnataka High Court. Made for quick access of legal documents within the courtroom.",
+    link: "",
+    linkLabel: "Case Study",
+    image: "/jiva.png",
+  },
+
+  {
+    role: "Design Consultant (Current)",
+    company: "Kotak Securities",
+    description:
+      "Currently working on increasing the discoverability of stock baskets on the platform.",
+    link: "https://neo.kotaksecurities.com/",
+    linkLabel: "Download App",
+    image: "/kotak.png",
   },
   {
     role: "Founding Designer",
@@ -24,23 +43,15 @@ const workArray = [
     image: "/apperture.png",
   },
   {
-    role: "Design Consultant (Current)",
-    company: "Kotak Securities",
+    role: "Founding Team",
+    company: "Quash",
     description:
-      "Currently working on increasing the discoverability of stock baskets on the platform.",
-    link: "https://neo.kotaksecurities.com/",
-    linkLabel: "Download App",
-    image: "/kotak.png",
+      "Launched a Mobile Testing Platform for cohesive bug reporting.Currently in pre-seed stage with 10 Clients.",
+    link: "https://quashbugs.com/",
+    linkLabel: "Website",
+    image: "/quash.png",
   },
-  {
-    role: "Product Designer",
-    company: "JIVA AI",
-    description:
-      "Helped building an AI Assistant for Judges in Karnataka High Court. Made for quick access of legal documents within the courtroom.",
-    link: "",
-    linkLabel: "Case Study",
-    image: "/jiva.png",
-  },
+
   {
     role: "Product Designer",
     company: "Bangalore Pulse",
@@ -80,7 +91,7 @@ export default function Home() {
               </div>
             </div>
             <Link
-              href="https://drive.google.com/file/d/1jU5aKsnAp4RvQzb6-BycEK7ZCyIgYzBC/view?usp=drive_link"
+              href="https://drive.google.com/file/d/11LGtL-3M1hErNUvs-uPH_IBz1PhVLQql/view?usp=drive_link"
               target="_blank"
             >
               <button className="text-white flex px-5 py-[10px] justify-center items-center gap-2 rounded-full bg-gray-800 md:text-lg md:font-medium md:py-2 hover:bg-[#CFCFDB] hover:text-[#232333]">
