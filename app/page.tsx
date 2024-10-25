@@ -11,7 +11,7 @@ const workArray = [
     description:
       "Enhanced the overall candidate experience and refined a recruiter dashboard UX at Hunar AI, an AI powered frontline recruitment platform.",
     link: "https://www.hunar.ai/",
-    linkLabel: "Case Study",
+    linkLabel: "Website",
     image: "/hunar.svg",
   },
   {
