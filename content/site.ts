@@ -10,8 +10,7 @@ export const links = {
   linkedin: "https://www.linkedin.com/in/iraakbar/",
   instagram: "https://www.instagram.com/_canvast_/",
   youtube: "https://www.youtube.com/channel/UCBHnP5uqW2PZJpRmNhLu6Vw",
-  resume:
-    "https://drive.google.com/file/d/1jU5aKsnAp4RvQzb6-BycEK7ZCyIgYzBC/view?usp=drive_link",
+  resume: "/Ira-Akbar-Resume.pdf",
   hunar: "https://www.hunar.ai/",
 };
 
