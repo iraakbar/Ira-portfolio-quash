@@ -23,22 +23,20 @@ export const seo = {
 export const hero = {
   line1: "People are interesting.",
   line2: "That's where I start.",
-  subline:
-    "I'm Ira, a product designer. I've designed for HR teams, delivery executives, judges and airport flyers. Some needed a screen. Some didn't.",
+  intro: "I'm Ira, a product designer.",
+  introMiddle:
+    "I've designed for HR teams, delivery executives, judges and airport flyers.",
+  introHighlight: "Some needed a screen. Some didn't.",
 };
 
-// Shown as grey text until Ira supplies single-colour logo files.
+// Single-colour black logos in /public/logos, shown at the same height.
 export const logoStrip = {
   label: "Designed for teams at",
-  names: [
-    "Aditya Birla Capital",
-    "Croma",
-    "Classplus",
-    "Career Launcher",
-    "Lloyds Metals and Energy",
-    "Prismforce",
-    "Tranzact AI",
-    "Canvas AI",
+  logos: [
+    { name: "Aditya Birla Capital", src: "/logos/aditya-birla-capital.png", width: 491, height: 193 },
+    { name: "Career Launcher", src: "/logos/career-launcher.png", width: 300, height: 79 },
+    { name: "Lloyds Metals and Energy", src: "/logos/lloyds-metals.png", width: 304, height: 38 },
+    { name: "Tranzact AI", src: "/logos/tranzact.png", width: 659, height: 128 },
   ],
 };
 

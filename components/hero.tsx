@@ -1,22 +1,35 @@
+import Link from "next/link";
 import { hero, links } from "@/content/site";
-import { PillLink } from "@/components/pill";
+
+const linkClass = "transition-colors hover:text-grey";
 
 export default function Hero() {
   return (
     <section className="page-x pb-[16vh] pt-[22vh]">
-      <h1 className="max-w-[760px] text-hero font-medium">
-        {hero.line1}
-        <br />
-        <span className="text-grey">{hero.line2}</span>
+      <p className="text-about font-medium text-grey">
+        {hero.line1} {hero.line2}
+      </p>
+      <h1 className="mt-4 max-w-[860px] text-intro font-medium">
+        {hero.intro} <span className="text-grey">{hero.introMiddle}</span>{" "}
+        {hero.introHighlight}
       </h1>
-      <p className="mt-6 max-w-[560px] text-about text-grey">{hero.subline}</p>
-      <div className="mt-8 flex flex-wrap gap-2">
-        <PillLink href={links.resume} external>
-          Resume
-        </PillLink>
-        <PillLink href="#work">Work</PillLink>
-        <PillLink href="#contact">Contact</PillLink>
-      </div>
+      <ul className="mt-10 flex flex-wrap gap-6 text-sm font-medium">
+        <li>
+          <a href={links.resume} target="_blank" rel="noopener noreferrer" className={linkClass}>
+            Resume ↗
+          </a>
+        </li>
+        <li>
+          <Link href="#work" className={linkClass}>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link href="#contact" className={linkClass}>
+            Contact
+          </Link>
+        </li>
+      </ul>
     </section>
   );
 }
