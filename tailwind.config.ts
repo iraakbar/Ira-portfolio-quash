@@ -25,7 +25,8 @@ const config: Config = {
       },
       fontSize: {
         hero: ["clamp(36px, 6vw, 72px)", { lineHeight: "1.02", letterSpacing: "-0.035em" }],
-        intro: ["clamp(28px, 4vw, 48px)", { lineHeight: "1.12", letterSpacing: "-0.03em" }],
+        lead: ["clamp(20px, 2.4vw, 30px)", { lineHeight: "1.3", letterSpacing: "-0.02em" }],
+        statement: ["clamp(22px, 3vw, 38px)", { lineHeight: "1.25", letterSpacing: "-0.025em" }],
         about: ["clamp(18px, 2vw, 22px)", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
         contact: ["clamp(26px, 3.6vw, 40px)", { lineHeight: "1.15", letterSpacing: "-0.03em" }],
         title: ["24px", { lineHeight: "1.05", letterSpacing: "-0.03em" }],

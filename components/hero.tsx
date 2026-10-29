@@ -1,35 +1,35 @@
 import Link from "next/link";
 import { hero, links } from "@/content/site";
 
-const linkClass = "transition-colors hover:text-grey";
+const buttonClass =
+  "inline-flex items-center rounded-lg border border-ink bg-paper px-5 py-2.5 text-base font-medium transition-colors hover:bg-ink hover:text-paper md:text-lg";
 
 export default function Hero() {
   return (
     <section className="page-x pb-[16vh] pt-[22vh]">
-      <p className="text-about font-medium text-grey">
-        {hero.line1} {hero.line2}
-      </p>
-      <h1 className="mt-4 max-w-[860px] text-intro font-medium">
-        {hero.intro} <span className="text-grey">{hero.introMiddle}</span>{" "}
-        {hero.introHighlight}
+      <h1 className="text-hero font-medium">
+        {hero.line1}
+        <br />
+        {hero.line2}
       </h1>
-      <ul className="mt-10 flex flex-wrap gap-6 text-sm font-medium">
-        <li>
-          <a href={links.resume} target="_blank" rel="noopener noreferrer" className={linkClass}>
-            Resume ↗
-          </a>
-        </li>
-        <li>
-          <Link href="#work" className={linkClass}>
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link href="#contact" className={linkClass}>
-            Contact
-          </Link>
-        </li>
-      </ul>
+      <p className="mt-4 text-lead text-grey">{hero.intro}</p>
+
+      <p className="mt-16 max-w-[820px] text-statement md:mt-24">
+        <span className="text-grey">{hero.introMiddle}</span>
+        <br />
+        {hero.introHighlight}
+      </p>
+      <div className="mt-8 flex flex-wrap gap-4">
+        <a href={links.resume} target="_blank" rel="noopener noreferrer" className={buttonClass}>
+          Resume
+        </a>
+        <Link href="#work" className={buttonClass}>
+          Work
+        </Link>
+        <Link href="#contact" className={buttonClass}>
+          Contact
+        </Link>
+      </div>
     </section>
   );
 }

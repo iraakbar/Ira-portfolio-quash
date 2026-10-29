@@ -23,7 +23,7 @@ export const seo = {
 export const hero = {
   line1: "People are interesting.",
   line2: "That's where I start.",
-  intro: "I'm Ira, a product designer.",
+  intro: "Hi! I'm Ira, a product designer.",
   introMiddle:
     "I've designed for HR teams, delivery executives, judges and airport flyers.",
   introHighlight: "Some needed a screen. Some didn't.",
