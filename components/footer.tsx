@@ -3,7 +3,7 @@ import { contact } from "@/content/site";
 export default function Footer() {
   return (
     <footer id="contact" className="mt-[18vh] border-t border-ink">
-      <div className="page-x pb-12 pt-[12vh]">
+      <div className="page-x pb-10 pt-14">
         <h2 className="text-contact font-medium">{contact.heading}</h2>
         <p className="mt-3 text-about text-grey">{contact.subline}</p>
         <a

@@ -6,7 +6,8 @@
   --ink: #0a0a0a; /* text, borders, inverted fills */
   --paper: #ffffff; /* background, cards */
   --grey: #8a8a8a; /* secondary text */
-  --mute: #bdbdbd; /* logo strip, subtitles on inverted cards */
+  --mute: #bdbdbd; /* logo strip */
+  --grey-soft: #9a9a9a; /* secondary text on inverted cards */
   --line: #e4e4e4; /* hairline dividers */
   --wash: #f3f3f3; /* image placeholders */
   --grid: rgba(10, 10, 10, 0.045); /* blueprint grid */

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-// Image with a fixed aspect ratio. Shows a marked placeholder until a photo is supplied.
+// Image with a fixed aspect ratio. Shows a plain grey box until a photo is supplied.
 export default function ImageSlot({
   src,
   alt,
@@ -20,13 +20,7 @@ export default function ImageSlot({
         aspect === "4/3" ? "aspect-[4/3]" : "aspect-[4/5]"
       } ${className}`}
     >
-      {src ? (
-        <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />
-      ) : (
-        <span className="absolute inset-0 flex items-center justify-center text-[13px] text-grey">
-          [Image to come]
-        </span>
-      )}
+      {src && <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />}
     </div>
   );
 }

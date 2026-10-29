@@ -4,7 +4,7 @@ import { PillLink } from "@/components/pill";
 export default function Hero() {
   return (
     <section className="page-x pb-[16vh] pt-[22vh]">
-      <h1 className="text-hero font-medium">
+      <h1 className="max-w-[760px] text-hero font-medium">
         {hero.line1}
         <br />
         <span className="text-grey">{hero.line2}</span>

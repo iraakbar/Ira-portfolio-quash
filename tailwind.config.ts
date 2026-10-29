@@ -14,6 +14,7 @@ const config: Config = {
       ink: "var(--ink)",
       paper: "var(--paper)",
       grey: "var(--grey)",
+      "grey-soft": "var(--grey-soft)",
       mute: "var(--mute)",
       line: "var(--line)",
       wash: "var(--wash)",

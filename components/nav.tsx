@@ -13,7 +13,7 @@ export default function Nav() {
         <Link href="/" className={linkClass}>
           Ira&apos;s Profile
         </Link>
-        <ul className="flex items-center gap-5">
+        <ul className="flex items-center gap-6">
           <li>
             <a
               href={links.resume}

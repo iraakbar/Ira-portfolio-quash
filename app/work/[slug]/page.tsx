@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: item.brief,
       url: path,
     },
-    twitter: { card: "summary", title, description: item.brief },
+    twitter: { card: "summary_large_image", title, description: item.brief },
   };
 }
 
@@ -50,9 +50,8 @@ export default async function CaseStudy({ params }: Props) {
         <p className="mt-1 text-sm text-grey">{item.company}</p>
         <p className="mt-6 max-w-[640px] text-about text-grey">{item.brief}</p>
 
-        <div className="mt-[12vh] rounded-card border border-line bg-paper p-6 text-sm text-grey">
-          [Case study content to come]
-        </div>
+        {/* Case study content to come from Ira. */}
+        <div aria-hidden="true" className="mt-[12vh] aspect-[16/9] rounded-card border border-line bg-wash" />
       </main>
       <Footer />
     </>

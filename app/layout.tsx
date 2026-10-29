@@ -16,9 +16,8 @@ export const metadata: Metadata = {
     url: "/",
     locale: "en_IN",
   },
-  // Switch to "summary_large_image" once share images are added.
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: seo.title,
     description: seo.description,
   },

@@ -19,12 +19,12 @@ export default function ViewAll({ items }: { items: WorkItem[] }) {
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((value) => !value)}
-        className="flex w-full items-center justify-between rounded-card border border-ink bg-paper px-[18px] py-4 text-sm font-medium transition-colors hover:bg-ink hover:text-paper"
+        className="flex w-full items-center justify-between rounded-card border border-ink bg-paper px-[18px] py-4 text-sm font-medium transition-colors hover:bg-ink hover:text-paper aria-expanded:bg-ink aria-expanded:text-paper"
       >
         View all
         <span
           aria-hidden="true"
-          className={`text-lg leading-none transition-transform duration-[250ms] ${
+          className={`text-lg font-normal leading-none transition-transform duration-[250ms] ${
             open ? "rotate-45" : ""
           }`}
         >
@@ -35,7 +35,7 @@ export default function ViewAll({ items }: { items: WorkItem[] }) {
       <div
         id={panelId}
         hidden={!open}
-        className="mt-3 rounded-card border border-ink bg-paper px-[18px]"
+        className="mt-3 rounded-card border border-ink bg-paper px-5 py-1"
       >
         <ul className="divide-y divide-line">
           {items.map((item) => {
@@ -49,8 +49,8 @@ export default function ViewAll({ items }: { items: WorkItem[] }) {
                   </span>
                   <span className="mt-1 block text-sm text-grey">{item.brief}</span>
                 </span>
-                <span className="shrink-0 text-[13px] font-medium text-grey">
-                  {external ? "↗" : "Case study ↗"}
+                <span className="shrink-0 whitespace-nowrap text-[13px] font-medium text-grey">
+                  {external ? "Download App ↗" : "Case study ↗"}
                 </span>
               </>
             );

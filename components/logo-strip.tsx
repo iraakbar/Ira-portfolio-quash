@@ -11,7 +11,7 @@ export default function LogoStrip() {
   return (
     <section aria-label={logoStrip.label}>
       <p className="page-x section-label mb-4">{logoStrip.label}</p>
-      <div className="overflow-hidden border-y border-line bg-paper py-[22px] text-sm font-medium text-mute">
+      <div className="overflow-hidden border-y border-line bg-paper py-[22px] text-xl font-semibold tracking-[-0.02em] text-mute">
         {/* Moving strip. The list is repeated so the loop is seamless. */}
         <div className="marquee-mask motion-reduce:hidden">
           <div className="marquee-track flex w-max">

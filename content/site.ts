@@ -102,23 +102,23 @@ export const onStage: CarouselItem[] = [
   },
 ];
 
-// Subtitles are placeholders until Ira supplies them.
+// Subtitles are placeholder copy until Ira supplies the final lines.
 export const freeTime: CarouselItem[] = [
   {
     title: "Act",
-    subtitle: "[Subtitle to come]",
+    subtitle: "Theatre, whenever there's a stage",
     image: null,
     imageAlt: "Ira acting on stage",
   },
   {
     title: "Sing",
-    subtitle: "[Subtitle to come]",
+    subtitle: "Covers, mostly on YouTube",
     image: null,
     imageAlt: "Ira singing",
   },
   {
     title: "Make art",
-    subtitle: "[Subtitle to come]",
+    subtitle: "Paintings, shared on Instagram",
     image: null,
     imageAlt: "One of Ira's artworks",
   },

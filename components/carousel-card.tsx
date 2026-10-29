@@ -34,9 +34,7 @@ export default function CarouselCard({ item }: { item: CarouselItem }) {
               </a>
             ) : (
               // Talk link still to come from Ira.
-              <span className="text-grey">
-                {item.linkLabel} ↗ [link to come]
-              </span>
+              <span className="text-grey">{item.linkLabel} ↗</span>
             )}
           </p>
         )}

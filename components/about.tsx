@@ -7,7 +7,7 @@ export default function About() {
       <h2 id="about-heading" className="section-label">
         About
       </h2>
-      <div className="mt-6 max-w-[720px] space-y-4 text-about">
+      <div className="mt-6 max-w-[640px] space-y-4 text-about">
         <p>{about.lead}</p>
         <p>{about.body}</p>
       </div>
