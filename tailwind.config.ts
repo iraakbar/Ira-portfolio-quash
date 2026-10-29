@@ -1,20 +1,45 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}"],
   theme: {
+    screens: {
+      tab: "700px",
+      md: "768px",
+      lg: "1024px",
+    },
+    colors: {
+      transparent: "transparent",
+      current: "currentColor",
+      ink: "var(--ink)",
+      paper: "var(--paper)",
+      grey: "var(--grey)",
+      mute: "var(--mute)",
+      line: "var(--line)",
+      wash: "var(--wash)",
+    },
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      fontFamily: {
+        sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+      },
+      fontSize: {
+        hero: ["clamp(36px, 6vw, 72px)", { lineHeight: "1.02", letterSpacing: "-0.035em" }],
+        about: ["clamp(18px, 2vw, 22px)", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
+        contact: ["clamp(26px, 3.6vw, 40px)", { lineHeight: "1.15", letterSpacing: "-0.03em" }],
+        title: ["24px", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+      },
+      maxWidth: {
+        content: "960px",
+      },
+      borderRadius: {
+        card: "4px",
+      },
+      transitionDuration: {
+        DEFAULT: "200ms",
       },
     },
   },
   plugins: [],
-}
-export default config
+};
+
+export default config;

@@ -1,87 +1,39 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
+import { contact } from "@/content/site";
 
-const footerNavArray = [
-  {
-    icon: "/Instagram.svg",
-    link: "https://www.instagram.com/_canvast_/",
-  },
-  {
-    icon: "/Letter.svg",
-    link: "iraakbar1@gmail.com",
-  },
-  {
-    icon: "/YouTube.svg",
-    link: "https://www.youtube.com/channel/UCBHnP5uqW2PZJpRmNhLu6Vw",
-  },
-  {
-    icon: "/LinkedIn.svg",
-    link: "https://www.linkedin.com/in/iraakbar/",
-  },
-];
-
-const Footer = () => {
+export default function Footer() {
   return (
-    <div className="w-full py-20 px-6 flex flex-col gap-8 md:gap-12 items-start justify-center md:pl-[126px] md:pt-[120px] md:pb-[200px] md:pr-[250px] ">
-      <div className="flex flex-col gap-2 items-start justify-center">
-        <p className="text-[#4B4B5F] text-[30px] md:text-[48px] font-[700]">
-          Want to connect?
-        </p>
-        <p className="text-[#CFCFDB] text-[14px] md:text-[40px] font-[700]">
-          Reach out for collaborations, or just a chat!
-        </p>
-      </div>
-      <div className="flex items-center justify-center gap-8 md:gap-12">
-        {footerNavArray.map((item, index) => (
-          <>
-            <Link
-              className={`${item.icon === "/Letter.svg" ? "hidden" : "flex"}`}
-              href={item.link}
-              key={index}
-              target="_blank"
-            >
-              <Image
-                src={item.icon}
-                height={32}
-                width={32}
-                alt={item.icon}
-                className="md:hidden flex"
-              />
-              <Image
-                src={item.icon}
-                height={50}
-                width={50}
-                alt={item.icon}
-                className="md:flex hidden"
-              />
-            </Link>
-            <Link
-              className={`${item.icon === "/Letter.svg" ? "flex" : "hidden"}`}
-              href="mailto:iraakbar1@gmail.com"
-              key={index}
-              target="_blank"
-            >
-              <Image
-                src={item.icon}
-                height={32}
-                width={32}
-                alt={item.icon}
-                className="md:hidden flex"
-              />
-              <Image
-                src={item.icon}
-                height={50}
-                width={50}
-                alt={item.icon}
-                className="md:flex hidden"
-              />
-            </Link>
-          </>
-        ))}
-      </div>
-    </div>
-  );
-};
+    <footer id="contact" className="mt-[18vh] border-t border-ink">
+      <div className="page-x pb-12 pt-[12vh]">
+        <h2 className="text-contact font-medium">{contact.heading}</h2>
+        <p className="mt-3 text-about text-grey">{contact.subline}</p>
+        <a
+          href={`mailto:${contact.email}`}
+          className="mt-10 inline-block break-all border-b border-ink text-contact font-medium transition-colors hover:border-grey hover:text-grey"
+        >
+          {contact.email}
+        </a>
 
-export default Footer;
+        <div className="mt-[72px] flex flex-col gap-6 text-[13px] text-grey md:flex-row md:items-end md:justify-between">
+          <div className="space-y-1">
+            <p>{contact.signOff}</p>
+            <p>{contact.copyright}</p>
+          </div>
+          <ul className="flex flex-wrap gap-5 font-medium">
+            {contact.socials.map((social) => (
+              <li key={social.label}>
+                <a
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-ink"
+                >
+                  {social.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </footer>
+  );
+}
