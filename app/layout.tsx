@@ -1,22 +1,24 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const title = "Ira Akbar, Product Designer";
+const description =
+  "Like everyone in my design community, I've let the work get ahead of the website. Taking a little time to catch it up.";
 
 export const metadata: Metadata = {
-  title: "Ira Portfolio",
-  description: "",
+  metadataBase: new URL("https://iraakbar.com"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: { type: "website", siteName: "Ira Akbar", title, description, url: "/" },
+  twitter: { card: "summary", title, description },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={GeistSans.variable}>
+      <body className="font-sans">{children}</body>
     </html>
   );
 }

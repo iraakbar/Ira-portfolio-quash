@@ -3,21 +3,71 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-  --background: #FFF;
+  --ink: #0a0a0a; /* text, borders, inverted fills */
+  --paper: #ffffff; /* background, cards */
+  --grey: #8a8a8a; /* secondary text */
+  --mute: #bdbdbd; /* logo strip */
+  --grey-soft: #9a9a9a; /* secondary text on inverted cards */
+  --line: #e4e4e4; /* hairline dividers */
+  --wash: #f3f3f3; /* image placeholders */
+  --grid: rgba(10, 10, 10, 0.045); /* blueprint grid */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    color: var(--ink);
+    background-color: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--ink);
+    outline-offset: 3px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: var(--background);
+@layer components {
+  .marquee-track {
+    animation: marquee 30s linear infinite;
+  }
+
+  .marquee-mask {
+    mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  /* 960px content width with a 16px gutter on mobile and 48px from 768px up. */
+  .page-x {
+    @apply mx-auto w-full max-w-[992px] px-4 md:max-w-[1056px] md:px-12;
+  }
+
+  .section-label {
+    @apply text-sm font-medium text-grey;
+  }
 }
