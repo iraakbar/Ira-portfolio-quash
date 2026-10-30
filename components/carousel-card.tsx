@@ -26,12 +26,10 @@ export default function CarouselCard({ item }: { item: CarouselItem }) {
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex gap-1"
+                className="inline-flex gap-1 transition-colors hover:text-grey"
               >
                 {item.linkLabel}
-                <span aria-hidden="true" className="text-grey transition-colors group-hover:text-ink">
-                  ↗
-                </span>
+                <span aria-hidden="true">↗</span>
               </a>
             ) : (
               // Talk link still to come from Ira.

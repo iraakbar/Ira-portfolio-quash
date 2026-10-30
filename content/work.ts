@@ -26,7 +26,7 @@ export const work: WorkItem[] = [
     brief:
       "Job apps didn't work for these workers, so I designed a Hindi-speaking recruiter that understands what work they want.",
     slug: "conversational-design",
-    image: null,
+    image: "/work/conversational-design.webp",
     imageAlt: "Voice recruiter conversation flow for construction workers",
   },
   {
@@ -38,7 +38,7 @@ export const work: WorkItem[] = [
     brief:
       "An API-only internal tool became a self-serve platform as monthly calls grew from 3.1M to 11M.",
     slug: "hunar-voice",
-    image: null,
+    image: "/work/hunar-voice.webp",
     imageAlt: "Hunar Voice self-serve campaign platform",
   },
   {
@@ -50,7 +50,7 @@ export const work: WorkItem[] = [
     brief:
       "Candidates stalled before the final in-store visit. Voice agents followed up at the right moment, across days.",
     slug: "ai-workflow-design",
-    image: null,
+    image: "/work/ai-workflow-design.webp",
     imageAlt: "Voice agent follow-up workflow for candidate onboarding",
   },
   {
