@@ -115,7 +115,7 @@ export const work: WorkItem[] = [
   },
 ];
 
-export const visibleCount = 4;
+export const visibleCount = 6;
 
 // Case study pages are switched off until their content is ready. While false, work items
 // don't link anywhere, and /work/[slug] pages, their share images and sitemap entries
