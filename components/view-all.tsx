@@ -4,7 +4,7 @@ import { useId, useState } from "react";
 import WorkCard from "@/components/work-card";
 import type { WorkItem } from "@/content/work";
 
-// Work grid with a "View all" control that reveals the remaining cards in place.
+// Work list with a "View all" control that reveals the remaining cards in place.
 // Hidden cards stay in the HTML so their links are still crawlable.
 export default function ViewAll({
   items,
@@ -18,7 +18,7 @@ export default function ViewAll({
 
   return (
     <>
-      <ul id={gridId} className="mt-8 grid auto-rows-fr grid-cols-1 gap-6 tab:grid-cols-2 md:gap-8">
+      <ul id={gridId} className="mt-8 flex flex-col gap-16 md:gap-24">
         {items.map((item, index) => (
           <li key={item.title} hidden={!open && index >= visibleCount}>
             <WorkCard item={item} />
@@ -30,7 +30,7 @@ export default function ViewAll({
         aria-expanded={open}
         aria-controls={gridId}
         onClick={() => setOpen((value) => !value)}
-        className="mt-6 flex w-full items-center md:mt-8 justify-between rounded-card border border-ink bg-paper px-[18px] py-4 text-sm font-medium transition-colors hover:bg-ink hover:text-paper"
+        className="mx-auto mt-16 flex items-center gap-3 rounded-full border border-ink bg-paper px-6 py-2.5 text-[15px] font-medium transition-colors hover:bg-ink hover:text-paper md:mt-24"
       >
         {open ? "View less" : "View all"}
         <span

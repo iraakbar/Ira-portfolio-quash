@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { links } from "@/content/site";
@@ -32,14 +33,22 @@ export default function Nav() {
     >
       <nav
         aria-label="Main"
-        className="page-x flex items-center justify-between gap-4 py-7 text-sm font-medium"
+        className="page-x flex items-center justify-between gap-4 py-5 text-[15px] font-medium"
         // Keep the header visible while someone tabs through its links.
         onFocus={() => setHidden(false)}
       >
-        <Link href="/" className={linkClass}>
-          Ira&apos;s Profile
+        <Link href="/" className={`flex items-center gap-3 ${linkClass}`}>
+          <Image
+            src="/avatar.webp"
+            alt=""
+            width={44}
+            height={44}
+            priority
+            className="h-11 w-11 rounded-full object-cover"
+          />
+          <span className="sr-only tab:not-sr-only">Ira&apos;s Profile</span>
         </Link>
-        <ul className="flex items-center gap-6">
+        <ul className="flex items-center gap-5 rounded-full border border-line bg-paper px-5 py-2.5">
           <li>
             <a
               href={links.resume}

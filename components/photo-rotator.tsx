@@ -32,7 +32,7 @@ export default function PhotoRotator({
   }, [photos.length, delayMs]);
 
   return (
-    <div className="relative aspect-[4/5] overflow-hidden rounded-card border border-ink bg-wash">
+    <div className="frame aspect-[4/5]">
       {photos.map((photo, index) => (
         <Image
           key={photo.src}

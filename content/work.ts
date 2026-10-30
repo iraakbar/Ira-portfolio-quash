@@ -72,7 +72,7 @@ export const work: WorkItem[] = [
     years: "2025",
     company: "Hunar.ai",
     brief:
-      "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 30+ clients.",
+      "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 50+ clients.",
     slug: "hunar-connect",
     image: "/work/hunar-connect.webp",
     imageAlt: "Hunar Connect hiring CRM",

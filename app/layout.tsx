@@ -1,7 +1,11 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { Instrument_Serif } from "next/font/google";
 import { googleSiteVerification, links, seo, siteUrl } from "@/content/site";
 import "./globals.css";
+
+// Display serif for the hero headline only.
+const serif = Instrument_Serif({ weight: "400", subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -46,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={GeistSans.variable}>
+    <html lang="en" className={`${GeistSans.variable} ${serif.variable}`}>
       <body className="font-sans">
         <script
           type="application/ld+json"

@@ -17,24 +17,27 @@ const config: Config = {
       "grey-soft": "var(--grey-soft)",
       line: "var(--line)",
       wash: "var(--wash)",
+      ascii: "var(--ascii)",
     },
     extend: {
       fontFamily: {
         sans: ["var(--font-geist-sans)", "system-ui", "sans-serif"],
+        serif: ["var(--font-serif)", "Georgia", "serif"],
       },
       fontSize: {
         hero: ["clamp(36px, 6vw, 72px)", { lineHeight: "1.02", letterSpacing: "-0.035em" }],
-        lead: ["clamp(20px, 2.4vw, 30px)", { lineHeight: "1.3", letterSpacing: "-0.02em" }],
-        statement: ["clamp(22px, 3vw, 38px)", { lineHeight: "1.25", letterSpacing: "-0.025em" }],
+        display: ["clamp(56px, 10vw, 120px)", { lineHeight: "0.92", letterSpacing: "-0.04em" }],
+        lead: ["clamp(17px, 1.6vw, 20px)", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
         about: ["clamp(18px, 2vw, 22px)", { lineHeight: "1.5", letterSpacing: "-0.01em" }],
         contact: ["clamp(26px, 3.6vw, 40px)", { lineHeight: "1.15", letterSpacing: "-0.03em" }],
-        title: ["24px", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
+        title: ["24px", { lineHeight: "1.15", letterSpacing: "-0.03em" }],
       },
       maxWidth: {
         content: "960px",
       },
       borderRadius: {
         card: "4px",
+        frame: "12px",
       },
       transitionDuration: {
         DEFAULT: "200ms",

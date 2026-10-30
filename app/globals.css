@@ -8,8 +8,8 @@
   --grey: #8a8a8a; /* secondary text */
   --grey-soft: #9a9a9a; /* secondary text on inverted cards */
   --line: #e4e4e4; /* hairline dividers */
-  --wash: #f3f3f3; /* image placeholders */
-  --grid: rgba(10, 10, 10, 0.045); /* blueprint grid */
+  --wash: #f4f3f3; /* image frames and placeholders */
+  --ascii: #c9cdd3; /* ASCII shape behind the hero */
 }
 
 @layer base {
@@ -20,10 +20,6 @@
   body {
     color: var(--ink);
     background-color: var(--paper);
-    background-image:
-      linear-gradient(var(--grid) 1px, transparent 1px),
-      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
-    background-size: 32px 32px;
     -webkit-font-smoothing: antialiased;
   }
 
@@ -51,8 +47,13 @@
     @apply text-sm font-medium text-grey;
   }
 
-  /* Section headings on the homepage (My recent work, About, On stage...). */
+  /* Section headings on the homepage (Work, About, Elsewhere). */
   .section-title {
-    @apply text-title font-medium md:text-[32px];
+    @apply text-title font-medium;
+  }
+
+  /* Rounded grey frame that holds work and Elsewhere images. */
+  .frame {
+    @apply relative overflow-hidden rounded-frame bg-wash;
   }
 }
