@@ -118,7 +118,10 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Mostly on Instagram and in karaoke bars",
     image: "/free-time/sing-karaoke.webp",
     imageAlt: "Ira singing karaoke at Road House Bluez",
-    morePhotos: [{ src: "/free-time/sing-stage.webp", alt: "Ira singing live on stage at The Quad" }],
+    morePhotos: [
+      { src: "/free-time/sing-stage.webp", alt: "Ira singing live on stage at The Quad" },
+      { src: "/free-time/sing-ukulele.webp", alt: "Ira singing Window by Still Woozy on the ukulele" },
+    ],
   },
   {
     title: "Make art",
