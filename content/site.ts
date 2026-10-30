@@ -91,16 +91,6 @@ export const testimonials: Testimonial[] = [
     ],
     photo: "/testimonials/urvashi-soni.webp",
   },
-  {
-    name: "Ayush Srivastava",
-    role: "Founder & CTO, Quash",
-    linkedin: "https://www.linkedin.com/in/ayushshrivastavaa/",
-    quote: [
-      "Ira takes the time to understand a problem deeply, even when it's technically complex, and turns that understanding into thoughtful, useful design. She's observant, asks sharp questions, and picks up on details that are easy to overlook.",
-      "What stands out is her diligence and focus. She follows through carefully, paying as much attention to the small interactions as she does to the overall experience.",
-    ],
-    photo: "/testimonials/ayush-srivastava.webp",
-  },
 ];
 
 export type ElsewhereItem = {
