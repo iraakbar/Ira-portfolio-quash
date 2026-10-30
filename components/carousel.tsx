@@ -14,13 +14,13 @@ export default function Carousel({
   const headingId = `${id}-heading`;
   return (
     <section aria-labelledby={headingId} className="page-x mt-[18vh]">
-      <h2 id={headingId} className="section-label">
+      <h2 id={headingId} className="section-title">
         {heading}
       </h2>
       <ul
         tabIndex={0}
         aria-labelledby={headingId}
-        className="mt-6 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4"
+        className="mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4"
       >
         {items.map((item) => (
           <CarouselCard key={item.title} item={item} />

@@ -17,7 +17,7 @@ export default function Home() {
         <LogoStrip />
 
         <section id="work" aria-labelledby="work-heading" className="page-x mt-[18vh] scroll-mt-8">
-          <h2 id="work-heading" className="section-label">
+          <h2 id="work-heading" className="section-title">
             My recent work
           </h2>
           <ViewAll items={work} visibleCount={visibleCount} />

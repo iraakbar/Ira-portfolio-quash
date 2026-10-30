@@ -74,4 +74,9 @@
   .section-label {
     @apply text-sm font-medium text-grey;
   }
+
+  /* Section headings on the homepage (My recent work, About, On stage...). */
+  .section-title {
+    @apply text-title font-medium md:text-[32px];
+  }
 }

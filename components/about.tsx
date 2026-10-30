@@ -3,10 +3,10 @@ import { about } from "@/content/site";
 export default function About() {
   return (
     <section aria-labelledby="about-heading" className="page-x mt-[18vh]">
-      <h2 id="about-heading" className="section-label">
+      <h2 id="about-heading" className="section-title">
         About
       </h2>
-      <div className="mt-6 max-w-[640px] space-y-4 text-about">
+      <div className="mt-8 max-w-[640px] space-y-4 text-about">
         <p>{about.lead}</p>
         <p>{about.body}</p>
       </div>
