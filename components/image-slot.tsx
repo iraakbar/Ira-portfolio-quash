@@ -11,14 +11,14 @@ export default function ImageSlot({
 }: {
   src: string | null;
   alt: string;
-  aspect: "16/10" | "4/5";
+  aspect: "4/3" | "4/5";
   sizes: string;
   position?: string;
   className?: string;
 }) {
   return (
     <div
-      className={`frame ${aspect === "16/10" ? "aspect-[16/10]" : "aspect-[4/5]"} ${className}`}
+      className={`frame ${aspect === "4/3" ? "aspect-[4/3]" : "aspect-[4/5]"} ${className}`}
     >
       {src && (
         <Image

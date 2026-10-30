@@ -3,10 +3,24 @@ import PhotoRotator from "@/components/photo-rotator";
 import type { ElsewhereItem } from "@/content/site";
 
 // Elsewhere card: a 4:5 photo, then a "Kind · Title" headline, a line of text and an optional link.
-export default function CarouselCard({ item, index = 0 }: { item: ElsewhereItem; index?: number }) {
+export default function CarouselCard({
+  item,
+  index = 0,
+  copy = false,
+}: {
+  item: ElsewhereItem;
+  index?: number;
+  // Duplicate used only to make the auto-scroll loop seamless.
+  copy?: boolean;
+}) {
   const sizes = "(min-width: 768px) 280px, 240px";
   return (
-    <li className="w-[240px] shrink-0 snap-start md:w-[280px]">
+    <li
+      className={`w-[240px] shrink-0 md:w-[280px] ${copy ? "motion-reduce:hidden" : ""}`}
+      data-copy={copy || undefined}
+      aria-hidden={copy || undefined}
+      inert={copy || undefined}
+    >
       <article className="flex h-full flex-col">
         {item.image && item.morePhotos ? (
           <PhotoRotator

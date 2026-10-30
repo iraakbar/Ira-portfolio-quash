@@ -47,6 +47,29 @@ export const about = {
   ],
 };
 
+export type Testimonial = {
+  name: string;
+  role: string;
+  linkedin: string;
+  // Paragraphs of the quote, without the quote marks.
+  quote: string[];
+  // Black-and-white photo in /public. null shows initials until it arrives.
+  photo: string | null;
+};
+
+export const testimonials: Testimonial[] = [
+  {
+    name: "Krishna Khandelwal",
+    role: "Founder, Hunar.ai",
+    linkedin: "https://www.linkedin.com/in/krishna-khandelwal/",
+    quote: [
+      "As a founder, you have a vision and a lot you want to say. Ira has a gift for finding the story in all of it and making it clear and compelling. She helped me turn our ideas for Hunar into a narrative that people could understand and investors could connect with, which was especially valuable during our fundraise.",
+      "She has shaped how we think about design and the value we place on it at Hunar. She's someone any founder would be fortunate to have on their team.",
+    ],
+    photo: null,
+  },
+];
+
 export type ElsewhereItem = {
   // Small label before the title, e.g. "Talk" or "Art".
   kind: string;

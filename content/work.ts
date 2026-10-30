@@ -117,14 +117,21 @@ export const work: WorkItem[] = [
 
 export const visibleCount = 4;
 
-export const caseStudies = work.filter(
-  (item): item is WorkItem & { slug: string } => Boolean(item.slug),
-);
+// Case study pages are switched off until their content is ready. While false, work items
+// don't link anywhere, and /work/[slug] pages, their share images and sitemap entries
+// aren't generated. Set to true to bring them back.
+export const caseStudiesLive = false;
+
+export const caseStudies = caseStudiesLive
+  ? work.filter((item): item is WorkItem & { slug: string } => Boolean(item.slug))
+  : [];
 
 export function getCaseStudy(slug: string) {
   return caseStudies.find((item) => item.slug === slug);
 }
 
+// Where a work item links to, or null when it has nowhere to go yet.
 export function workHref(item: WorkItem) {
-  return item.externalUrl ?? `/work/${item.slug}`;
+  if (item.externalUrl) return item.externalUrl;
+  return caseStudiesLive && item.slug ? `/work/${item.slug}` : null;
 }

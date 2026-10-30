@@ -39,7 +39,7 @@ export default function Nav() {
       >
         <Link href="/" className={`flex items-center gap-3 ${linkClass}`}>
           <Image
-            src="/avatar.webp"
+            src="/avatar-ira.webp"
             alt=""
             width={44}
             height={44}

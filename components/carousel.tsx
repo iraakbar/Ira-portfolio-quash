@@ -1,7 +1,8 @@
+import AutoScroll from "@/components/auto-scroll";
 import CarouselCard from "@/components/carousel-card";
 import type { ElsewhereItem } from "@/content/site";
 
-// Horizontal scroll with snap points.
+// Horizontal row of cards that scrolls on its own (see AutoScroll).
 export default function Carousel({
   id,
   heading,
@@ -20,15 +21,15 @@ export default function Carousel({
         {heading}
       </h2>
       {intro && <p className="mt-3 text-about text-grey">{intro}</p>}
-      <ul
-        tabIndex={0}
-        aria-labelledby={headingId}
-        className="mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4"
-      >
+      <AutoScroll labelledBy={headingId} className="mt-8 flex gap-5 overflow-x-auto pb-4">
         {items.map((item, index) => (
           <CarouselCard key={item.title ?? item.kind} item={item} index={index} />
         ))}
-      </ul>
+        {/* Second set for a seamless loop; hidden from assistive tech and keyboard. */}
+        {items.map((item, index) => (
+          <CarouselCard key={`copy-${item.title ?? item.kind}`} item={item} index={index} copy />
+        ))}
+      </AutoScroll>
     </section>
   );
 }

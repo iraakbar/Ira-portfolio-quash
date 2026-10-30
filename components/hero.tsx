@@ -10,7 +10,7 @@ export default function Hero() {
         {/* Decorative ASCII shape behind the headline. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 -inset-y-16 flex select-none items-center justify-center overflow-hidden"
+          className="pointer-events-none absolute inset-x-0 -inset-y-6 flex select-none items-center justify-center overflow-hidden"
         >
           <pre className="font-mono text-[6px] leading-[1.15] text-ascii [mask-image:radial-gradient(closest-side,#000_55%,transparent)] md:text-[9px]">
             {asciiShape}
@@ -23,7 +23,7 @@ export default function Hero() {
         </h1>
       </div>
 
-      <p className="mx-auto mt-14 max-w-[640px] text-lead text-grey">
+      <p className="mx-auto mt-14 max-w-[720px] text-statement text-grey">
         {hero.statement}
         <br />
         <span className="text-ink">{hero.highlight}</span>
