@@ -6,7 +6,7 @@ const buttonClass =
 
 export default function Hero() {
   return (
-    <section className="page-x pb-[16vh] pt-[22vh]">
+    <section className="page-x pt-[22vh]">
       <h1 className="text-hero font-medium">
         {hero.line1}
         <br />

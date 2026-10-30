@@ -2,7 +2,6 @@ import About from "@/components/about";
 import Carousel from "@/components/carousel";
 import Footer from "@/components/footer";
 import Hero from "@/components/hero";
-import LogoStrip from "@/components/logo-strip";
 import Nav from "@/components/nav";
 import ViewAll from "@/components/view-all";
 import { freeTime, onStage } from "@/content/site";
@@ -14,7 +13,6 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <LogoStrip />
 
         <section id="work" aria-labelledby="work-heading" className="page-x mt-[18vh] scroll-mt-8">
           <h2 id="work-heading" className="section-title">

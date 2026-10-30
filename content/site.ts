@@ -30,17 +30,6 @@ export const hero = {
   introHighlight: "Some needed a screen. Some didn't.",
 };
 
-// Single-colour black logos in /public/logos, shown at the same height.
-export const logoStrip = {
-  label: "Designed for teams at",
-  logos: [
-    { name: "Aditya Birla Capital", src: "/logos/aditya-birla-capital.png", width: 491, height: 193 },
-    { name: "Career Launcher", src: "/logos/career-launcher.png", width: 300, height: 79 },
-    { name: "Lloyds Metals and Energy", src: "/logos/lloyds-metals.png", width: 304, height: 38 },
-    { name: "Tranzact AI", src: "/logos/tranzact.png", width: 659, height: 128 },
-  ],
-};
-
 export const about = {
   lead: "I'm the lead product designer at Hunar AI.",
   body: "Most days I'm also writing the prompts behind our voice agents, sitting on client calls, or working out why a conversation went quiet halfway through. I also make the videos and comms that reach our users, and share what I learn on LinkedIn.",
