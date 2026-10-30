@@ -111,7 +111,10 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Theatre, Short Films, wherever there's a good story to tell",
     image: "/free-time/act.webp",
     imageAlt: "Ira performing in a stage play",
-    morePhotos: [{ src: "/free-time/act-film.webp", alt: "Ira in a scene from the short film series Nazar Na Lagey" }],
+    morePhotos: [
+      { src: "/free-time/act-film.webp", alt: "Ira in a scene from the short film series Nazar Na Lagey" },
+      { src: "/free-time/act-stage2.webp", alt: "Ira performing on stage in a pink salwar kameez and patterned dupatta" },
+    ],
   },
   {
     title: "Sing",
