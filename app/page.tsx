@@ -5,7 +5,6 @@ import Hero from "@/components/hero";
 import LogoStrip from "@/components/logo-strip";
 import Nav from "@/components/nav";
 import ViewAll from "@/components/view-all";
-import WorkCard from "@/components/work-card";
 import { freeTime, onStage } from "@/content/site";
 import { visibleCount, work } from "@/content/work";
 
@@ -21,14 +20,7 @@ export default function Home() {
           <h2 id="work-heading" className="section-label">
             My recent work
           </h2>
-          <ul className="mt-6 grid auto-rows-fr grid-cols-1 gap-3 tab:grid-cols-2">
-            {work.slice(0, visibleCount).map((item) => (
-              <li key={item.title}>
-                <WorkCard item={item} />
-              </li>
-            ))}
-          </ul>
-          <ViewAll items={work.slice(visibleCount)} />
+          <ViewAll items={work} visibleCount={visibleCount} />
         </section>
 
         <About />

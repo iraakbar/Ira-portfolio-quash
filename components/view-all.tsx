@@ -1,27 +1,38 @@
 "use client";
 
-import Link from "next/link";
 import { useId, useState } from "react";
-import { type WorkItem, workHref } from "@/content/work";
+import WorkCard from "@/components/work-card";
+import type { WorkItem } from "@/content/work";
 
-const rowClass =
-  "flex items-start justify-between gap-6 py-4 transition-colors hover:text-grey";
-
-// "View all" control that opens a list panel of the remaining work.
-export default function ViewAll({ items }: { items: WorkItem[] }) {
+// Work grid with a "View all" control that reveals the remaining cards in place.
+// Hidden cards stay in the HTML so their links are still crawlable.
+export default function ViewAll({
+  items,
+  visibleCount,
+}: {
+  items: WorkItem[];
+  visibleCount: number;
+}) {
   const [open, setOpen] = useState(false);
-  const panelId = useId();
+  const gridId = useId();
 
   return (
-    <div className="mt-3">
+    <>
+      <ul id={gridId} className="mt-6 grid auto-rows-fr grid-cols-1 gap-3 tab:grid-cols-2">
+        {items.map((item, index) => (
+          <li key={item.title} hidden={!open && index >= visibleCount}>
+            <WorkCard item={item} />
+          </li>
+        ))}
+      </ul>
       <button
         type="button"
         aria-expanded={open}
-        aria-controls={panelId}
+        aria-controls={gridId}
         onClick={() => setOpen((value) => !value)}
-        className="flex w-full items-center justify-between rounded-card border border-ink bg-paper px-[18px] py-4 text-sm font-medium transition-colors hover:bg-ink hover:text-paper aria-expanded:bg-ink aria-expanded:text-paper"
+        className="mt-3 flex w-full items-center justify-between rounded-card border border-ink bg-paper px-[18px] py-4 text-sm font-medium transition-colors hover:bg-ink hover:text-paper"
       >
-        View all
+        {open ? "View less" : "View all"}
         <span
           aria-hidden="true"
           className={`text-lg font-normal leading-none transition-transform duration-[250ms] ${
@@ -31,50 +42,6 @@ export default function ViewAll({ items }: { items: WorkItem[] }) {
           +
         </span>
       </button>
-
-      <div
-        id={panelId}
-        hidden={!open}
-        className="mt-3 rounded-card border border-ink bg-paper px-5 py-1"
-      >
-        <ul className="divide-y divide-line">
-          {items.map((item) => {
-            const external = Boolean(item.externalUrl);
-            const row = (
-              <>
-                <span>
-                  <span className="block text-base font-medium">{item.title}</span>
-                  <span className="mt-1 block text-sm text-grey">
-                    {item.project} · {item.category} · {item.years} · {item.company}
-                  </span>
-                  <span className="mt-1 block text-sm text-grey">{item.brief}</span>
-                </span>
-                <span className="shrink-0 whitespace-nowrap text-[13px] font-medium text-grey">
-                  {external ? "Download App ↗" : "Case study ↗"}
-                </span>
-              </>
-            );
-            return (
-              <li key={item.title}>
-                {external ? (
-                  <a
-                    href={workHref(item)}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={rowClass}
-                  >
-                    {row}
-                  </a>
-                ) : (
-                  <Link href={workHref(item)} className={rowClass}>
-                    {row}
-                  </Link>
-                )}
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-    </div>
+    </>
   );
 }

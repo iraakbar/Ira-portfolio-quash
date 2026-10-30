@@ -62,7 +62,7 @@ export const work: WorkItem[] = [
     brief:
       "Judges at the Karnataka High Court had minutes per hearing. I designed an assistant that finds the exact section and the right version, fast.",
     slug: "jiva",
-    image: null,
+    image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
   },
   {
@@ -74,7 +74,7 @@ export const work: WorkItem[] = [
     brief:
       "CRM workflows for AI assessments, CV matching and walk-in interviews, used by 30+ clients.",
     slug: "hunar-connect",
-    image: null,
+    image: "/work/hunar-connect.webp",
     imageAlt: "Hunar Connect hiring CRM",
   },
   {
@@ -86,7 +86,7 @@ export const work: WorkItem[] = [
     brief:
       "A spreadsheet-style way to query data that shaped the product's next phase.",
     slug: "apperture",
-    image: null,
+    image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
   },
   {
@@ -98,7 +98,7 @@ export const work: WorkItem[] = [
     brief:
       "After COVID, unplanned purchases at Bengaluru Airport fell from 25% to 14%. We brought the airport's offers to flyers' phones.",
     slug: "bial-pulse",
-    image: null,
+    image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",
   },
   {
@@ -110,7 +110,7 @@ export const work: WorkItem[] = [
     brief:
       "A chat assistant for stock and mutual fund investing that informed the beta launch.",
     externalUrl: "https://neo.kotaksecurities.com/",
-    image: null,
+    image: "/work/kotak-neo.webp",
     imageAlt: "Kotak Neo AI chat assistant",
   },
 ];
