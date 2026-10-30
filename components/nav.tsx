@@ -11,7 +11,7 @@ export default function Nav() {
         className="flex items-center justify-between gap-4 py-7 text-sm font-medium"
       >
         <Link href="/" className={linkClass}>
-          Ira&apos;s Profile
+          Ira&apos;s Portfolio
         </Link>
         <ul className="flex items-center gap-6">
           <li>
