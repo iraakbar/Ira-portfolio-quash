@@ -152,6 +152,15 @@ export const freeTime: CarouselItem[] = [
     imageAlt: "Ira hugging her ginger cat",
     morePhotos: [{ src: "/free-time/cat-sofa.webp", alt: "Ira's ginger cat peering over the back of a floral sofa" }],
   },
+  {
+    title: "Try to speak on LinkedIn",
+    image: "/free-time/linkedin-1.webp",
+    imageAlt: "Ira talking to camera in front of a whiteboard for a LinkedIn video",
+    morePhotos: [
+      { src: "/free-time/linkedin-2.webp", alt: "Ira smiling to camera in front of a whiteboard of model training notes" },
+      { src: "/free-time/linkedin-3.webp", alt: "Ira explaining something to camera at her desk" },
+    ],
+  },
 ];
 
 export const contact = {
