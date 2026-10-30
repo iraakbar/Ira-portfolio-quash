@@ -9,6 +9,7 @@ export const links = {
   email: "mailto:helloiraakbar@gmail.com",
   linkedin: "https://www.linkedin.com/in/iraakbar/",
   instagram: "https://www.instagram.com/_canvast_/",
+  instagramMusic: "https://www.instagram.com/so_iratated/",
   youtube: "https://www.youtube.com/channel/UCBHnP5uqW2PZJpRmNhLu6Vw",
   resume: "/Ira-Akbar-Resume.pdf",
   hunar: "https://www.hunar.ai/",
@@ -117,7 +118,21 @@ export const freeTime: CarouselItem[] = [
     ],
   },
   {
+    title: "Make art",
+    linkLabel: "Instagram",
+    url: links.instagram,
+    subtitle: "Paintings, embroidery, furniture. I love arts and crafts",
+    image: "/free-time/art-painting.webp",
+    imageAlt: "Ira's acrylic portrait of a boy among oleander flowers",
+    morePhotos: [
+      { src: "/free-time/art-embroidery.webp", alt: "Ira's hand embroidery of two folk-art birds in a hoop" },
+      { src: "/free-time/art-poster.webp", alt: "Ira's illustrated poster for The Queen's Gambit" },
+    ],
+  },
+  {
     title: "Sing",
+    linkLabel: "Instagram",
+    url: links.instagramMusic,
     subtitle: "Mostly on Instagram and in karaoke bars",
     image: "/free-time/sing-karaoke.webp",
     imageAlt: "Ira singing karaoke at Road House Bluez",
@@ -127,13 +142,14 @@ export const freeTime: CarouselItem[] = [
     ],
   },
   {
-    title: "Make art",
-    subtitle: "Paintings, embroidery, furniture. I love arts and crafts",
-    image: "/free-time/art-painting.webp",
-    imageAlt: "Ira's acrylic portrait of a boy among oleander flowers",
+    title: "Try to speak on LinkedIn",
+    linkLabel: "LinkedIn",
+    url: links.linkedin,
+    image: "/free-time/linkedin-1.webp",
+    imageAlt: "Ira talking to camera in front of a whiteboard for a LinkedIn video",
     morePhotos: [
-      { src: "/free-time/art-embroidery.webp", alt: "Ira's hand embroidery of two folk-art birds in a hoop" },
-      { src: "/free-time/art-poster.webp", alt: "Ira's illustrated poster for The Queen's Gambit" },
+      { src: "/free-time/linkedin-2.webp", alt: "Ira smiling to camera in front of a whiteboard of model training notes" },
+      { src: "/free-time/linkedin-3.webp", alt: "Ira explaining something to camera at her desk" },
     ],
   },
   {
@@ -151,15 +167,6 @@ export const freeTime: CarouselItem[] = [
     image: "/free-time/cat-hug.webp",
     imageAlt: "Ira hugging her ginger cat",
     morePhotos: [{ src: "/free-time/cat-sofa.webp", alt: "Ira's ginger cat peering over the back of a floral sofa" }],
-  },
-  {
-    title: "Try to speak on LinkedIn",
-    image: "/free-time/linkedin-1.webp",
-    imageAlt: "Ira talking to camera in front of a whiteboard for a LinkedIn video",
-    morePhotos: [
-      { src: "/free-time/linkedin-2.webp", alt: "Ira smiling to camera in front of a whiteboard of model training notes" },
-      { src: "/free-time/linkedin-3.webp", alt: "Ira explaining something to camera at her desk" },
-    ],
   },
 ];
 
