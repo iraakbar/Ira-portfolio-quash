@@ -55,6 +55,7 @@ export const about = {
     "Framer",
     "Metabase",
     "Final Cut Pro",
+    "Canva",
   ],
 };
 
