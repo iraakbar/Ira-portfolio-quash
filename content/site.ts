@@ -107,14 +107,14 @@ export const freeTime: CarouselItem[] = [
   {
     title: "Act",
     subtitle: "Theatre, Short Films, wherever there's a good story to tell",
-    image: null,
-    imageAlt: "Ira acting on stage",
+    image: "/free-time/act.webp",
+    imageAlt: "Ira performing in a stage play",
   },
   {
     title: "Sing",
     subtitle: "Mostly on Instagram and in karaoke bars",
-    image: null,
-    imageAlt: "Ira singing",
+    image: "/free-time/sing-karaoke.webp",
+    imageAlt: "Ira singing karaoke at Road House Bluez",
   },
   {
     title: "Make art",
@@ -125,8 +125,8 @@ export const freeTime: CarouselItem[] = [
   {
     title: "Host",
     subtitle: "Cooking and hosting parties",
-    image: null,
-    imageAlt: "Ira cooking for friends",
+    image: "/free-time/host-table.webp",
+    imageAlt: "A party spread Ira cooked: buns, dips, sandwiches and doughnuts",
   },
 ];
 
