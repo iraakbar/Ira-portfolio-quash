@@ -125,7 +125,10 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Paintings, embroidery, furniture. I love arts and crafts",
     image: "/free-time/art-painting.webp",
     imageAlt: "Ira's acrylic portrait of a boy among oleander flowers",
-    morePhotos: [{ src: "/free-time/art-embroidery.webp", alt: "Ira's hand embroidery of two folk-art birds in a hoop" }],
+    morePhotos: [
+      { src: "/free-time/art-embroidery.webp", alt: "Ira's hand embroidery of two folk-art birds in a hoop" },
+      { src: "/free-time/art-poster.webp", alt: "Ira's illustrated poster for The Queen's Gambit" },
+    ],
   },
   {
     title: "Host",
