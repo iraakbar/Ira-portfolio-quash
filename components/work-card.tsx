@@ -15,16 +15,10 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         className="!rounded-[2px] border border-line"
       />
       <div className="flex flex-1 flex-col px-2 pb-1.5 pt-4">
-        <h3 className="text-title font-medium">
-          {item.title}
-          {external && " ↗"}
-        </h3>
+        <h3 className="text-title font-medium">{item.title}</h3>
         <p className="mt-3 text-sm font-medium">{item.project}</p>
         <p className="mt-1 text-sm text-grey transition-colors group-hover:text-grey-soft">
-          {item.category} · {item.years}
-        </p>
-        <p className="text-sm text-grey transition-colors group-hover:text-grey-soft">
-          {item.company}
+          {item.category} · {item.years} · {item.company}
         </p>
         <p className="mt-3 text-sm leading-normal text-grey transition-colors group-hover:text-grey-soft">
           {item.brief}

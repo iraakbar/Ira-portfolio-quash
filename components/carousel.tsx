@@ -1,15 +1,17 @@
 import CarouselCard from "@/components/carousel-card";
-import type { CarouselItem } from "@/content/site";
+import type { ElsewhereItem } from "@/content/site";
 
-// Horizontal scroll with snap points, used by On stage and free time.
+// Horizontal scroll with snap points.
 export default function Carousel({
   id,
   heading,
+  intro,
   items,
 }: {
   id: string;
   heading: string;
-  items: CarouselItem[];
+  intro?: string;
+  items: ElsewhereItem[];
 }) {
   const headingId = `${id}-heading`;
   return (
@@ -17,13 +19,14 @@ export default function Carousel({
       <h2 id={headingId} className="section-title">
         {heading}
       </h2>
+      {intro && <p className="mt-3 text-about text-grey">{intro}</p>}
       <ul
         tabIndex={0}
         aria-labelledby={headingId}
         className="mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4"
       >
         {items.map((item, index) => (
-          <CarouselCard key={item.title} item={item} index={index} />
+          <CarouselCard key={item.title ?? item.kind} item={item} index={index} />
         ))}
       </ul>
     </section>

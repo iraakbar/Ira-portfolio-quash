@@ -1,15 +1,23 @@
 import ImageSlot from "@/components/image-slot";
 import PhotoRotator from "@/components/photo-rotator";
-import type { CarouselItem } from "@/content/site";
+import type { ElsewhereItem } from "@/content/site";
 
-// Card used by both the On stage and free-time carousels:
-// a headline on top, a 4:5 photo, and a one-line subtitle.
-export default function CarouselCard({ item, index = 0 }: { item: CarouselItem; index?: number }) {
+// Elsewhere card: a "Kind · Title" headline, a 4:5 photo, a line of text and an optional link.
+export default function CarouselCard({ item, index = 0 }: { item: ElsewhereItem; index?: number }) {
   const sizes = "(min-width: 768px) 280px, 240px";
   return (
     <li className="w-[240px] shrink-0 snap-start md:w-[280px]">
       <article className="flex h-full flex-col rounded-card border border-ink bg-paper p-[10px]">
-        <h3 className="px-1 pb-3 pt-1 text-base font-medium">{item.title}</h3>
+        <h3 className="px-1 pb-3 pt-1 text-base font-medium">
+          {item.title ? (
+            <>
+              <span className="text-grey">{item.kind} · </span>
+              {item.title}
+            </>
+          ) : (
+            item.kind
+          )}
+        </h3>
         {item.image && item.morePhotos ? (
           <PhotoRotator
             photos={[{ src: item.image, alt: item.imageAlt }, ...item.morePhotos]}
@@ -26,7 +34,7 @@ export default function CarouselCard({ item, index = 0 }: { item: CarouselItem; 
             className="border border-ink"
           />
         )}
-        {item.subtitle && <p className="px-1 pt-3 text-sm text-grey">{item.subtitle}</p>}
+        <p className="px-1 pt-3 text-sm text-grey">{item.text}</p>
         {item.linkLabel && (
           <p className="mt-auto px-1 pb-1 pt-2 text-sm font-medium">
             {item.url ? (
@@ -40,7 +48,7 @@ export default function CarouselCard({ item, index = 0 }: { item: CarouselItem; 
                 <span aria-hidden="true">↗</span>
               </a>
             ) : (
-              // Talk link still to come from Ira.
+              // Link still to come from Ira.
               <span className="text-grey">{item.linkLabel} ↗</span>
             )}
           </p>

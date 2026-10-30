@@ -37,7 +37,7 @@ export default function Nav() {
         onFocus={() => setHidden(false)}
       >
         <Link href="/" className={linkClass}>
-          Ira&apos;s Portfolio
+          Ira&apos;s Profile
         </Link>
         <ul className="flex items-center gap-6">
           <li>
@@ -47,7 +47,7 @@ export default function Nav() {
               rel="noopener noreferrer"
               className={linkClass}
             >
-              Resume ↗
+              Resume
             </a>
           </li>
           <li>

@@ -43,11 +43,10 @@ export default async function CaseStudy({ params }: Props) {
       <Nav />
       <main className="page-x pt-[16vh]">
         <p className="section-label">
-          {item.category} · {item.years}
+          {item.category} · {item.years} · {item.company}
         </p>
         <h1 className="mt-4 max-w-[800px] text-hero font-medium">{item.title}</h1>
         <p className="mt-6 text-about">{item.project}</p>
-        <p className="mt-1 text-sm text-grey">{item.company}</p>
         <p className="mt-6 max-w-[640px] text-about text-grey">{item.brief}</p>
 
         {/* Case study content to come from Ira. */}

@@ -1,6 +1,6 @@
 // The eight work cards. Copy is final: edit only with Ira's sign-off.
 // Cards with a slug get a case study page at /work/[slug].
-// Cards with an externalUrl link out and show a ↗.
+// Cards with an externalUrl link out to a live app.
 
 export type WorkItem = {
   title: string;
@@ -18,97 +18,97 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
-    title: "When there's no app, the conversation is the interface",
-    project: "A voice recruiter for construction workers",
+    title: "When apps are a barrier, conversation becomes the interface.",
+    project: "Voice AI for Construction Workers",
     category: "Conversational Design",
     years: "2026",
     company: "Hunar.ai",
     brief:
-      "Job apps didn't work for these workers, so I designed a Hindi-speaking recruiter that understands what work they want.",
+      "Workers signed up but went no further. Language barriers, varying literacy levels and unfamiliar app flows stood between them and potential jobs. I designed a multilingual voice recruiter that understood their work preferences, suggested matching gigs, and checked availability and interest through conversation.",
     slug: "conversational-design",
     image: "/work/conversational-design.webp",
     imageAlt: "Voice recruiter conversation flow for construction workers",
   },
   {
-    title: "From months to days for a client's first campaign",
+    title: "Making complex voice AI feel like an everyday tool",
     project: "Hunar Voice",
-    category: "UX/UI Design",
-    years: "2024 - Present",
+    category: "End-to-End Product Design",
+    years: "2026",
     company: "Hunar.ai",
     brief:
-      "An API-only internal tool became a self-serve platform as monthly calls grew from 3.1M to 11M.",
+      "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
     slug: "hunar-voice",
     image: "/work/hunar-voice.webp",
     imageAlt: "Hunar Voice self-serve campaign platform",
   },
   {
-    title: "The app worked. People still didn't finish.",
-    project: "An onboarding workflow for a quick-commerce company",
+    title: "Turning onboarding into a guided conversation",
+    project: "Multi-stage conversational onboarding for a quick-commerce company",
     category: "AI Workflow Design",
     years: "2026",
     company: "Hunar.ai",
     brief:
-      "Candidates stalled before the final in-store visit. Voice agents followed up at the right moment, across days.",
+      "Packers stalled at different stages, from uploading documents to visiting the store. The app showed the process, but couldn't address what was holding each person back. I designed a sequence of voice agents that used each packer's progress and previous conversations to offer focused guidance at the right moment.",
     slug: "ai-workflow-design",
     image: "/work/ai-workflow-design.webp",
     imageAlt: "Voice agent follow-up workflow for candidate onboarding",
   },
   {
-    title: "An AI that finds the law, without interpreting it",
+    title: "Designing for a courtroom where every minute counts",
     project: "JIVA",
-    category: "AI Product Design",
-    years: "2022 - 2023",
+    category: "Zero-to-One Product Design",
+    years: "2023",
     company: "Parallel",
     brief:
-      "Judges at the Karnataka High Court had minutes per hearing. I designed an assistant that finds the exact section and the right version, fast.",
+      "With cases piling up and limited time per hearing, finding the right information quickly mattered. I stepped into the unfamiliar world of the Karnataka High Court, researched how judges worked, and designed an AI assistant from the ground up to help them find and reference case-related documents during hearings.",
     slug: "jiva",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
   },
   {
-    title: "Bringing AI hiring into one place",
+    title: "Making complex hiring workflows easier to run",
     project: "Hunar Connect",
     category: "Product Design",
-    years: "2024 - Present",
+    years: "2025",
     company: "Hunar.ai",
     brief:
-      "CRM workflows for AI assessments, CV matching and walk-in interviews, used by 30+ clients.",
+      "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 30+ clients.",
     slug: "hunar-connect",
     image: "/work/hunar-connect.webp",
     imageAlt: "Hunar Connect hiring CRM",
   },
   {
-    title: "Users kept leaving for Excel, so I brought Excel in",
+    title: "Making data exploration feel as familiar as a spreadsheet",
     project: "Apperture",
-    category: "Product Design · B2B SaaS",
-    years: "2021 - 2023",
+    category: "Zero-to-One Product Design",
+    years: "2023",
     company: "Parallel",
     brief:
-      "A spreadsheet-style way to query data that shaped the product's next phase.",
+      "Users kept returning to Excel to work with their data. Working with the founders, I helped design a product analytics platform from the ground up, bringing query-building, data exploration and an AI assistant into a familiar, spreadsheet-style workspace.",
     slug: "apperture",
     image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
   },
   {
-    title: "Getting flyers to browse again",
+    title: "Helping flyers discover more of the airport",
     project: "BIAL Pulse",
-    category: "Product Design · B2C",
-    years: "2021 - 2022",
+    category: "Product Design",
+    years: "2022",
     company: "Parallel",
     brief:
-      "After COVID, unplanned purchases at Bengaluru Airport fell from 25% to 14%. We brought the airport's offers to flyers' phones.",
+      "As spontaneous airport shopping declined after COVID, Bengaluru Airport needed new ways to connect flyers with its shops and offers. I contributed to research and design for its loyalty app, using modular, personalised experiences to help flyers discover what was relevant to them.",
     slug: "bial-pulse",
     image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",
   },
   {
-    title: "Kotak Neo's first AI feature",
-    project: "Kotak Securities",
-    category: "UX Design · Fintech",
+    title: "Exploring a conversational way to navigate investing",
+    project: "Kotak Neo",
+    category: "AI Feature Concept & UX Design · Fintech",
     years: "2023 - 2024",
-    company: "Kotak",
+    company: "Kotak Securities",
     brief:
-      "A chat assistant for stock and mutual fund investing that informed the beta launch.",
+      "I conceptualised and prototyped Kotak Neo's first AI feature, exploring how a chat assistant could help users navigate stocks and mutual funds. The proof of concept helped the team evaluate the experience and informed the feature's beta launch.",
     externalUrl: "https://neo.kotaksecurities.com/",
     image: "/work/kotak-neo.webp",
     imageAlt: "Kotak Neo AI chat assistant",
