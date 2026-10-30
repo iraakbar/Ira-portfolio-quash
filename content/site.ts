@@ -141,7 +141,10 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Cooking and hosting parties",
     image: "/free-time/host-table.webp",
     imageAlt: "A party spread Ira cooked: buns, dips, sandwiches and doughnuts",
-    morePhotos: [{ src: "/free-time/host-toast.webp", alt: "Friends raising a toast over a dinner Ira hosted" }],
+    morePhotos: [
+      { src: "/free-time/host-toast.webp", alt: "Friends raising a toast over a dinner Ira hosted" },
+      { src: "/free-time/host-feast.webp", alt: "Guests serving themselves from a feast of biryani, kebabs and desserts Ira hosted" },
+    ],
   },
   {
     title: "Pamper my cat",
