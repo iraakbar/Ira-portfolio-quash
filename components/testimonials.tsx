@@ -44,14 +44,18 @@ function Card({ item, copy = false }: { item: Testimonial; copy?: boolean }) {
             </span>
           )}
           <span className="text-sm">
-            <a
-              href={item.linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-medium transition-colors hover:text-grey"
-            >
-              {item.name} <span aria-hidden="true">↗</span>
-            </a>
+            {item.linkedin ? (
+              <a
+                href={item.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium transition-colors hover:text-grey"
+              >
+                {item.name} <span aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <span className="font-medium">{item.name}</span>
+            )}
             <span className="block text-grey">{item.role}</span>
           </span>
         </figcaption>

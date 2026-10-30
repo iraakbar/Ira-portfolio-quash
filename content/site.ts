@@ -50,7 +50,8 @@ export const about = {
 export type Testimonial = {
   name: string;
   role: string;
-  linkedin: string;
+  // LinkedIn profile. Optional until Ira supplies it.
+  linkedin?: string;
   // Paragraphs of the quote, without the quote marks.
   quote: string[];
   // Black-and-white photo in /public. null shows initials until it arrives.
@@ -65,6 +66,15 @@ export const testimonials: Testimonial[] = [
     quote: [
       "As a founder, you have a vision and a lot you want to say. Ira has a gift for finding the story in all of it and making it clear and compelling. She helped me turn our ideas for Hunar into a narrative that people could understand and investors could connect with, which was especially valuable during our fundraise.",
       "She has shaped how we think about design and the value we place on it at Hunar. She's someone any founder would be fortunate to have on their team.",
+    ],
+    photo: null,
+  },
+  {
+    name: "Himanshu",
+    role: "Co-founder, Parallel",
+    quote: [
+      "Ira is incredibly easy to work with. She grasps complex problems quickly, thinks beyond design, and takes ownership of responsibilities beyond what's expected of her. That made it easy for us to explore ideas, iterate quickly and ship without compromising on design quality.",
+      "She's a true team player who puts her heart into the work. You can trust her to care about the product as a whole and do what it takes to move it forward.",
     ],
     photo: null,
   },
