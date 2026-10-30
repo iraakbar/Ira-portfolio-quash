@@ -46,7 +46,7 @@ export default function Nav() {
             priority
             className="h-11 w-11 rounded-full object-cover"
           />
-          <span className="sr-only tab:not-sr-only">Ira&apos;s Profile</span>
+          <span className="sr-only tab:not-sr-only">Ira&apos;s Portfolio</span>
         </Link>
         <ul className="flex items-center gap-5 rounded-full border border-line bg-paper px-5 py-2.5">
           <li>

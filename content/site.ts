@@ -130,8 +130,7 @@ export const elsewhere = {
       kind: "Acting",
       text: "I've been acting on stage, streets and on camera recently.",
       linkLabel: "Instagram",
-      // Which Instagram account? Waiting on Ira.
-      url: null,
+      url: "https://www.instagram.com/jhatpatmicrofilms/",
       image: "/free-time/act.webp",
       imageAlt: "Ira performing in a stage play",
       morePhotos: [
