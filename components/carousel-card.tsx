@@ -13,6 +13,7 @@ export default function CarouselCard({ item }: { item: CarouselItem }) {
           alt={item.imageAlt}
           aspect="4/5"
           sizes="(min-width: 768px) 280px, 240px"
+          position={item.imagePosition}
           className="border border-ink"
         />
         <p className="px-1 pt-3 text-sm text-grey">

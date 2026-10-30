@@ -65,6 +65,8 @@ export type CarouselItem = {
   linkLabel?: string;
   // Photo path in /public. null until Ira supplies it.
   image: string | null;
+  // Which part of the photo to keep when it is cropped to 4:5.
+  imagePosition?: string;
   imageAlt: string;
 };
 
@@ -74,28 +76,30 @@ export const onStage: CarouselItem[] = [
     subtitle: "Using Conversational AI to Spot Attrition Signals",
     linkLabel: "Watch talk",
     url: null,
-    image: null,
-    imageAlt: "Ira speaking at the India AI Impact Summit 2026",
+    image: "/talks/ai-impact-summit.webp",
+    imageAlt: "Ira at the India AI Impact Summit 2026",
   },
   {
     title: "EkStep Voice AI Conference",
     subtitle: "From App Drop-offs to Conversational Onboarding",
     linkLabel: "Watch talk",
     url: null,
-    image: null,
-    imageAlt: "Ira speaking at the EkStep Voice AI Conference",
+    image: "/talks/ekstep.webp",
+    imageAlt: "Ira speaking on stage at the EkStep Voice AI Conference",
   },
   {
     title: "Scaler School of Technology",
     subtitle: "Guest lecture · Designing with Empathy",
-    image: null,
-    imageAlt: "Ira giving a guest lecture at Scaler School of Technology",
+    image: "/talks/scaler.png",
+    imagePosition: "right",
+    imageAlt: "Ira presenting a guest lecture to Scaler School of Technology over video call",
   },
   {
     title: "NIFT Gandhinagar",
     subtitle: "Guest lecture · Storytelling in Case Studies, Basics of UX Design",
-    image: null,
-    imageAlt: "Ira giving a guest lecture at NIFT Gandhinagar",
+    image: "/talks/nift-gandhinagar.webp",
+    imagePosition: "right",
+    imageAlt: "Ira waving to NIFT Gandhinagar students during an online guest lecture",
   },
 ];
 

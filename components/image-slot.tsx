@@ -6,12 +6,14 @@ export default function ImageSlot({
   alt,
   aspect,
   sizes,
+  position,
   className = "",
 }: {
   src: string | null;
   alt: string;
   aspect: "4/3" | "4/5";
   sizes: string;
+  position?: string;
   className?: string;
 }) {
   return (
@@ -20,7 +22,14 @@ export default function ImageSlot({
         aspect === "4/3" ? "aspect-[4/3]" : "aspect-[4/5]"
       } ${className}`}
     >
-      {src && <Image src={src} alt={alt} fill sizes={sizes} className="object-cover" />}
+      {src && <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes={sizes}
+          className="object-cover"
+          style={position ? { objectPosition: position } : undefined}
+        />}
     </div>
   );
 }
