@@ -22,8 +22,8 @@ export default function Carousel({
         aria-labelledby={headingId}
         className="mt-8 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-4"
       >
-        {items.map((item) => (
-          <CarouselCard key={item.title} item={item} />
+        {items.map((item, index) => (
+          <CarouselCard key={item.title} item={item} index={index} />
         ))}
       </ul>
     </section>

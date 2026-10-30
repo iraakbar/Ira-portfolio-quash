@@ -59,7 +59,7 @@ export const about = {
 
 export type CarouselItem = {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   // Talk recording link. null until Ira supplies it.
   url?: string | null;
   linkLabel?: string;
@@ -68,6 +68,8 @@ export type CarouselItem = {
   // Which part of the photo to keep when it is cropped to 4:5.
   imagePosition?: string;
   imageAlt: string;
+  // Extra photos. When present, the card crossfades through all of them.
+  morePhotos?: { src: string; alt: string }[];
 };
 
 export const onStage: CarouselItem[] = [
@@ -88,18 +90,18 @@ export const onStage: CarouselItem[] = [
     imageAlt: "Ira speaking on stage at the EkStep Voice AI Conference",
   },
   {
-    title: "Scaler School of Technology",
-    subtitle: "Guest lecture · Designing with Empathy",
-    image: "/talks/scaler.png",
-    imagePosition: "right",
-    imageAlt: "Ira presenting a guest lecture to Scaler School of Technology over video call",
-  },
-  {
     title: "NIFT Gandhinagar",
     subtitle: "Guest lecture · Storytelling in Case Studies, Basics of UX Design",
     image: "/talks/nift-gandhinagar.webp",
     imagePosition: "right",
     imageAlt: "Ira waving to NIFT Gandhinagar students during an online guest lecture",
+  },
+  {
+    title: "Scaler School of Technology",
+    subtitle: "Guest lecture · Designing with Empathy",
+    image: "/talks/scaler.png",
+    imagePosition: "right",
+    imageAlt: "Ira presenting a guest lecture to Scaler School of Technology over video call",
   },
 ];
 
@@ -115,6 +117,7 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Mostly on Instagram and in karaoke bars",
     image: "/free-time/sing-karaoke.webp",
     imageAlt: "Ira singing karaoke at Road House Bluez",
+    morePhotos: [{ src: "/free-time/sing-stage.webp", alt: "Ira singing live on stage at The Quad" }],
   },
   {
     title: "Make art",
@@ -127,6 +130,13 @@ export const freeTime: CarouselItem[] = [
     subtitle: "Cooking and hosting parties",
     image: "/free-time/host-table.webp",
     imageAlt: "A party spread Ira cooked: buns, dips, sandwiches and doughnuts",
+    morePhotos: [{ src: "/free-time/host-toast.webp", alt: "Friends raising a toast over a dinner Ira hosted" }],
+  },
+  {
+    title: "Pamper my cat",
+    image: "/free-time/cat-hug.webp",
+    imageAlt: "Ira hugging her ginger cat",
+    morePhotos: [{ src: "/free-time/cat-sofa.webp", alt: "Ira's ginger cat peering over the back of a floral sofa" }],
   },
 ];
 
