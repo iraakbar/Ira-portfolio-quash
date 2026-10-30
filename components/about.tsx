@@ -1,5 +1,4 @@
 import { about } from "@/content/site";
-import { Pill } from "@/components/pill";
 
 export default function About() {
   return (
@@ -14,10 +13,11 @@ export default function About() {
       <p className="mt-6 text-sm text-grey">
         {about.previouslyLabel} {about.previously.join(" · ")}
       </p>
-      <ul className="mt-8 flex flex-wrap gap-2" aria-label="Tools">
-        {about.tools.map((tool) => (
-          <li key={tool}>
-            <Pill>{tool}</Pill>
+      <ul className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-2 text-sm font-medium" aria-label="Tools">
+        {about.tools.map((tool, index) => (
+          <li key={tool} className="flex items-center gap-4">
+            {tool}
+            {index < about.tools.length - 1 && <span aria-hidden="true">•</span>}
           </li>
         ))}
       </ul>
