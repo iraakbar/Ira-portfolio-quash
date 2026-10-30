@@ -72,9 +72,29 @@ export const testimonials: Testimonial[] = [
   {
     name: "Himanshu",
     role: "Co-founder, Parallel",
+    linkedin: "https://www.linkedin.com/in/hkalra1/",
     quote: [
       "Ira is incredibly easy to work with. She grasps complex problems quickly, thinks beyond design, and takes ownership of responsibilities beyond what's expected of her. That made it easy for us to explore ideas, iterate quickly and ship without compromising on design quality.",
       "She's a true team player who puts her heart into the work. You can trust her to care about the product as a whole and do what it takes to move it forward.",
+    ],
+    photo: null,
+  },
+  {
+    name: "Urvashi Soni",
+    role: "Principal Engineer, Hunar.ai",
+    quote: [
+      "Ira is exceptionally organised and attentive to detail, which makes her a great partner to engineering. She thinks through how an experience should behave and brings clarity to the decisions and details we need to build it well.",
+      "She has helped shape how design and engineering work together at Hunar, making collaboration smoother and easier for the team.",
+    ],
+    photo: null,
+  },
+  {
+    name: "Ayush Srivastava",
+    role: "Founder & CTO, Quash",
+    linkedin: "https://www.linkedin.com/in/ayushshrivastavaa/",
+    quote: [
+      "Ira takes the time to understand a problem deeply, even when it's technically complex, and turns that understanding into thoughtful, useful design. She's observant, asks sharp questions, and picks up on details that are easy to overlook.",
+      "What stands out is her diligence and focus. She follows through carefully, paying as much attention to the small interactions as she does to the overall experience.",
     ],
     photo: null,
   },
