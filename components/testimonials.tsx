@@ -1,6 +1,6 @@
 import Image from "next/image";
 import AutoScroll from "@/components/auto-scroll";
-import { type Testimonial, testimonials } from "@/content/site";
+import { type Testimonial, testimonials, testimonialsHeading } from "@/content/site";
 
 function Card({ item, copy = false }: { item: Testimonial; copy?: boolean }) {
   const initials = item.name
@@ -68,12 +68,12 @@ function Card({ item, copy = false }: { item: Testimonial; copy?: boolean }) {
 export default function Testimonials() {
   const scrolls = testimonials.length >= 3;
   return (
-    <section aria-labelledby="testimonials-heading" className="page-x mt-[14vh]">
-      <h2 id="testimonials-heading" className="sr-only">
-        Testimonials
+    <section aria-labelledby="testimonials-heading" className="page-x mt-[18vh]">
+      <h2 id="testimonials-heading" className="section-title">
+        {testimonialsHeading}
       </h2>
       {scrolls ? (
-        <AutoScroll labelledBy="testimonials-heading" className="flex gap-5 overflow-x-auto pb-4">
+        <AutoScroll labelledBy="testimonials-heading" className="mt-8 flex gap-5 overflow-x-auto pb-4">
           {testimonials.map((item) => (
             <Card key={item.name} item={item} />
           ))}
@@ -82,7 +82,7 @@ export default function Testimonials() {
           ))}
         </AutoScroll>
       ) : (
-        <ul className="flex gap-5 overflow-x-auto pb-4">
+        <ul className="mt-8 flex gap-5 overflow-x-auto pb-4">
           {testimonials.map((item) => (
             <Card key={item.name} item={item} />
           ))}

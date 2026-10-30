@@ -58,6 +58,8 @@ export type Testimonial = {
   photo: string | null;
 };
 
+export const testimonialsHeading = "What people say about me:";
+
 export const testimonials: Testimonial[] = [
   {
     name: "Krishna Khandelwal",
@@ -70,7 +72,7 @@ export const testimonials: Testimonial[] = [
     photo: null,
   },
   {
-    name: "Himanshu",
+    name: "Himanshu Kalra",
     role: "Co-founder, Parallel",
     linkedin: "https://www.linkedin.com/in/hkalra1/",
     quote: [
