@@ -10,7 +10,10 @@ export type WorkItem = {
   company: string;
   brief: string;
   slug?: string;
+  // Live app link (shown as "Download App").
   externalUrl?: string;
+  // Case study hosted elsewhere, e.g. a password-protected Drive file.
+  caseStudyUrl?: string;
   // Card image path in /public. null until Ira supplies it.
   image: string | null;
   imageAlt: string;
@@ -74,6 +77,7 @@ export const work: WorkItem[] = [
     brief:
       "With cases piling up and limited time per hearing, finding the right information quickly mattered. I stepped into the unfamiliar world of the Karnataka High Court, researched how judges worked, and designed an AI assistant from the ground up to help them find and reference case-related documents during hearings.",
     slug: "jiva",
+    caseStudyUrl: "https://drive.google.com/file/d/1DyqGmG9LJ4KGmQW6wiQpyf6NL6wGJCtK/view?usp=drive_link",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
   },
@@ -86,6 +90,7 @@ export const work: WorkItem[] = [
     brief:
       "Users kept returning to Excel to work with their data. Working with the founders, I helped design a product analytics platform from the ground up, bringing query-building, data exploration and an AI assistant into a familiar, spreadsheet-style workspace.",
     slug: "apperture",
+    caseStudyUrl: "https://drive.google.com/file/d/1BYKv5iBkV2BtYchBSDGUr35c_qGMLa8_/view?usp=drive_link",
     image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
   },
@@ -98,6 +103,7 @@ export const work: WorkItem[] = [
     brief:
       "As spontaneous airport shopping declined after COVID, Bengaluru Airport needed new ways to connect flyers with its shops and offers. I contributed to research and design for its loyalty app, using modular, personalised experiences to help flyers discover what was relevant to them.",
     slug: "bial-pulse",
+    caseStudyUrl: "https://drive.google.com/file/d/1c7SsUEHLmZlnQivp46pqsRCpXpGV5FN5/view?usp=drive_link",
     image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",
   },
@@ -133,5 +139,6 @@ export function getCaseStudy(slug: string) {
 // Where a work item links to, or null when it has nowhere to go yet.
 export function workHref(item: WorkItem) {
   if (item.externalUrl) return item.externalUrl;
-  return caseStudiesLive && item.slug ? `/work/${item.slug}` : null;
+  if (caseStudiesLive && item.slug) return `/work/${item.slug}`;
+  return item.caseStudyUrl ?? null;
 }

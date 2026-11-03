@@ -6,7 +6,8 @@ import { type WorkItem, workHref } from "@/content/work";
 // (stacked on mobile). Links only when there is somewhere to go.
 export default function WorkCard({ item }: { item: WorkItem }) {
   const href = workHref(item);
-  const external = Boolean(item.externalUrl);
+  // Anything that isn't one of our own /work pages opens in a new tab.
+  const external = Boolean(href && !href.startsWith("/"));
   const content = (
     <>
       <ImageSlot
@@ -26,7 +27,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         <p className="mt-4 text-[15px] leading-relaxed text-grey">{item.brief}</p>
         {href && (
           <p className="mt-5 text-sm font-medium">
-            {external ? "Download App" : "Case study"} <span aria-hidden="true">↗</span>
+            {item.externalUrl ? "Download App" : "Case study"} <span aria-hidden="true">↗</span>
           </p>
         )}
       </div>
