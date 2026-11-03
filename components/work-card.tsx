@@ -6,8 +6,9 @@ import { type WorkItem, workHref } from "@/content/work";
 // (stacked on mobile). Links only when there is somewhere to go.
 export default function WorkCard({ item }: { item: WorkItem }) {
   const href = workHref(item);
-  // Anything that isn't one of our own /work pages opens in a new tab.
-  const external = Boolean(href && !href.startsWith("/"));
+  // External links and password-protected case studies open in a new tab, so the
+  // portfolio stays open behind the PDF viewer. Only /work pages open in place.
+  const newTab = Boolean(href && (!href.startsWith("/") || item.caseStudyUrl));
   const content = (
     <>
       <ImageSlot
@@ -39,7 +40,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
   const className = "group grid items-center gap-6 md:grid-cols-2 md:gap-10";
 
   if (!href) return <article className={className}>{content}</article>;
-  if (external) {
+  if (newTab) {
     return (
       <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
         {content}
