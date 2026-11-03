@@ -60,18 +60,6 @@ export const work: WorkItem[] = [
     imageAlt: "Hunar Connect hiring CRM",
   },
   {
-    title: "Turning onboarding into a guided conversation",
-    project: "Multi-stage conversational onboarding for a quick-commerce company",
-    category: "AI Workflow Design",
-    years: "2026",
-    company: "Hunar.ai",
-    brief:
-      "Packers stalled at different stages, from uploading documents to visiting the store. The app showed the process, but couldn't address what was holding each person back. I designed a sequence of voice agents that used each packer's progress and previous conversations to offer focused guidance at the right moment.",
-    slug: "ai-workflow-design",
-    image: "/work/ai-workflow-design.webp",
-    imageAlt: "Voice agent follow-up workflow for candidate onboarding",
-  },
-  {
     title: "Designing for a courtroom where every minute counts",
     project: "JIVA",
     category: "Zero-to-One Product Design",
@@ -96,6 +84,18 @@ export const work: WorkItem[] = [
     caseStudyUrl: "/case-study/apperture",
     image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
+  },
+  {
+    title: "Turning onboarding into a guided conversation",
+    project: "Multi-stage conversational onboarding for a quick-commerce company",
+    category: "AI Workflow Design",
+    years: "2026",
+    company: "Hunar.ai",
+    brief:
+      "Packers stalled at different stages, from uploading documents to visiting the store. The app showed the process, but couldn't address what was holding each person back. I designed a sequence of voice agents that used each packer's progress and previous conversations to offer focused guidance at the right moment.",
+    slug: "ai-workflow-design",
+    image: "/work/ai-workflow-design.webp",
+    imageAlt: "Voice agent follow-up workflow for candidate onboarding",
   },
   {
     title: "Helping flyers discover more of the airport",
@@ -125,7 +125,7 @@ export const work: WorkItem[] = [
   },
 ];
 
-export const visibleCount = 6;
+export const visibleCount = 5;
 
 // Case study pages are switched off until their content is ready. While false, work items
 // don't link anywhere, and /work/[slug] pages, their share images and sitemap entries

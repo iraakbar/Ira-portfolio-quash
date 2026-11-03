@@ -93,7 +93,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Ayush Srivastava",
-    role: "Founder & CTO, Quash",
+    role: "Founder, Quash",
     linkedin: "https://www.linkedin.com/in/ayushshrivastavaa/",
     quote: [
       "Ira takes the time to understand a problem deeply, even when it's technically complex, and turns that understanding into thoughtful, useful design. She's observant, asks sharp questions, and picks up on details that are easy to overlook.",
