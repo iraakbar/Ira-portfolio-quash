@@ -31,7 +31,7 @@ export const work: WorkItem[] = [
       "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
     slug: "hunar-voice",
     externalUrl: "https://hunar.ai/sign-up",
-    externalLabel: "Sign up",
+    externalLabel: "Explore platform",
     image: "/work/hunar-voice.webp",
     imageAlt: "Hunar Voice self-serve campaign platform",
   },
