@@ -7,8 +7,8 @@ import { type WorkItem, workHref } from "@/content/work";
 export default function WorkCard({ item }: { item: WorkItem }) {
   const href = workHref(item);
   // External links and password-protected case studies open in a new tab, so the
-  // portfolio stays open behind the PDF viewer. Only /work pages open in place.
-  const newTab = Boolean(href && (!href.startsWith("/") || item.caseStudyUrl));
+  // portfolio stays open behind the PDF viewer. Other pages on the site open in place.
+  const newTab = Boolean(href && (!href.startsWith("/") || href.startsWith("/case-study/")));
   const content = (
     <>
       <ImageSlot

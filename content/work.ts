@@ -44,6 +44,7 @@ export const work: WorkItem[] = [
     brief:
       "Workers signed up but went no further. Language barriers, varying literacy levels and unfamiliar app flows stood between them and potential jobs. I designed a multilingual voice recruiter that understood their work preferences, suggested matching gigs, and checked availability and interest through conversation.",
     slug: "conversational-design",
+    caseStudyUrl: "/coming-soon",
     image: "/work/conversational-design.webp",
     imageAlt: "Voice recruiter conversation flow for construction workers",
   },
@@ -56,6 +57,7 @@ export const work: WorkItem[] = [
     brief:
       "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 50+ clients.",
     slug: "hunar-connect",
+    caseStudyUrl: "/coming-soon",
     image: "/work/hunar-connect.webp",
     imageAlt: "Hunar Connect hiring CRM",
   },
@@ -94,6 +96,7 @@ export const work: WorkItem[] = [
     brief:
       "Packers stalled at different stages, from uploading documents to visiting the store. The app showed the process, but couldn't address what was holding each person back. I designed a sequence of voice agents that used each packer's progress and previous conversations to offer focused guidance at the right moment.",
     slug: "ai-workflow-design",
+    caseStudyUrl: "/coming-soon",
     image: "/work/ai-workflow-design.webp",
     imageAlt: "Voice agent follow-up workflow for candidate onboarding",
   },
