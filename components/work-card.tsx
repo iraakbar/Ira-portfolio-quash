@@ -27,7 +27,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         <p className="mt-4 text-[15px] leading-relaxed text-grey">{item.brief}</p>
         {href && (
           <p className="mt-5 text-sm font-medium">
-            {item.externalUrl ? "Download App" : "Case study"} <span aria-hidden="true">↗</span>
+            {item.externalUrl ? (item.externalLabel ?? "Visit") : "Case study"} <span aria-hidden="true">↗</span>
           </p>
         )}
       </div>

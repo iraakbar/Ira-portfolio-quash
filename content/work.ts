@@ -10,8 +10,9 @@ export type WorkItem = {
   company: string;
   brief: string;
   slug?: string;
-  // Live app link (shown as "Download App").
+  // Live product link, with its button label.
   externalUrl?: string;
+  externalLabel?: string;
   // Case study hosted elsewhere, e.g. a password-protected Drive file.
   caseStudyUrl?: string;
   // Card image path in /public. null until Ira supplies it.
@@ -29,6 +30,8 @@ export const work: WorkItem[] = [
     brief:
       "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
     slug: "hunar-voice",
+    externalUrl: "https://hunar.ai/sign-up",
+    externalLabel: "Sign up",
     image: "/work/hunar-voice.webp",
     imageAlt: "Hunar Voice self-serve campaign platform",
   },
@@ -116,6 +119,7 @@ export const work: WorkItem[] = [
     brief:
       "I conceptualised and prototyped Kotak Neo's first AI feature, exploring how a chat assistant could help users navigate stocks and mutual funds. The proof of concept helped the team evaluate the experience and informed the feature's beta launch.",
     externalUrl: "https://neo.kotaksecurities.com/",
+    externalLabel: "Download App",
     image: "/work/kotak-neo.webp",
     imageAlt: "Kotak Neo AI chat assistant",
   },
