@@ -26,9 +26,11 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         </p>
         <p className="mt-4 text-[15px] leading-relaxed text-grey">{item.brief}</p>
         {href && (
-          <p className="mt-5 text-sm font-medium">
-            {item.externalUrl ? (item.externalLabel ?? "Visit") : "Case study"} <span aria-hidden="true">↗</span>
-          </p>
+          // The whole item is the link; this only looks like a button and inverts on hover.
+          <span className="pill-button mt-6 group-hover:bg-ink group-hover:text-paper">
+            {item.externalUrl ? (item.externalLabel ?? "Visit") : "Case study"}
+            <span aria-hidden="true">↗</span>
+          </span>
         )}
       </div>
     </>

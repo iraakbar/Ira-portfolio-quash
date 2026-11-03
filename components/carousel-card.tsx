@@ -49,20 +49,22 @@ export default function CarouselCard({
         </h3>
         <p className="pt-1 text-sm text-grey">{item.text}</p>
         {item.linkLabel && (
-          <p className="mt-auto pt-3 text-sm font-medium">
+          <p className="mt-auto pt-4">
             {item.url ? (
               <a
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex gap-1 transition-colors hover:text-grey"
+                className="pill-button"
               >
                 {item.linkLabel}
                 <span aria-hidden="true">↗</span>
               </a>
             ) : (
               // Link still to come from Ira.
-              <span className="text-grey">{item.linkLabel} ↗</span>
+              <span className="pill-button border-line text-grey hover:bg-paper hover:text-grey">
+                {item.linkLabel} ↗
+              </span>
             )}
           </p>
         )}

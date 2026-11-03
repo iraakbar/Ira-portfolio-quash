@@ -52,6 +52,11 @@
     @apply text-title font-medium;
   }
 
+  /* Outlined pill button, as used for Resume. */
+  .pill-button {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink bg-paper px-6 py-2.5 text-[15px] font-medium transition-colors hover:bg-ink hover:text-paper;
+  }
+
   /* Rounded grey frame that holds work and Elsewhere images. */
   .frame {
     @apply relative overflow-hidden rounded-frame bg-wash;

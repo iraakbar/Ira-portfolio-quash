@@ -32,7 +32,7 @@ export default function Hero() {
         href={links.resume}
         target="_blank"
         rel="noopener noreferrer"
-        className="mt-8 inline-flex items-center rounded-full border border-ink bg-paper px-6 py-2.5 text-[15px] font-medium transition-colors hover:bg-ink hover:text-paper"
+        className="pill-button mt-8"
       >
         Resume
       </a>
