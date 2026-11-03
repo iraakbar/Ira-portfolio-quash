@@ -1,4 +1,3 @@
-import { asciiShape } from "@/components/ascii-shape";
 import { hero, links } from "@/content/site";
 
 export default function Hero() {
@@ -7,14 +6,17 @@ export default function Hero() {
       <p className="text-lead text-grey">{hero.intro}</p>
 
       <div className="relative mt-6">
-        {/* Decorative ASCII shape behind the headline. */}
+        {/* Decorative ASCII shape behind the headline. An image, so search engines skip it. */}
         <div
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 -inset-y-6 flex select-none items-center justify-center overflow-hidden"
         >
-          <pre className="font-mono text-[6px] leading-[1.15] text-ascii [mask-image:radial-gradient(closest-side,#000_55%,transparent)] md:text-[9px]">
-            {asciiShape}
-          </pre>
+          {/* eslint-disable-next-line @next/next/no-img-element -- tiny static SVG, no optimisation needed */}
+          <img
+            src="/ascii-shape.svg"
+            alt=""
+            className="w-[360px] max-w-none [mask-image:radial-gradient(closest-side,#000_55%,transparent)] md:w-[576px]"
+          />
         </div>
         <h1 className="relative font-serif text-display">
           {hero.line1}

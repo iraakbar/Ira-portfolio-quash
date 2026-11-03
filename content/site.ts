@@ -15,9 +15,9 @@ export const links = {
 };
 
 export const seo = {
-  title: "Ira Akbar, Product Designer · Voice AI and Conversational Design",
+  title: "Ira Akbar · Senior Product Designer | Hunar.ai",
   description:
-    "Hey! I'm Ira, a product designer. I've designed for HR teams, delivery executives, judges, jobseekers and airport flyers. Some needed a screen. Some didn't.",
+    "Ira Akbar is a senior product designer at Hunar AI, designing voice AI agents, conversational experiences and AI workflows for HR teams, jobseekers, judges and airport flyers.",
 };
 
 export const hero = {

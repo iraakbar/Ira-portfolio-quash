@@ -34,8 +34,16 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Ira Akbar",
-  jobTitle: "Lead Product Designer",
+  jobTitle: "Senior Product Designer",
+  description: seo.description,
   url: siteUrl,
+  image: `${siteUrl}/avatar-ira.webp`,
+  email: "mailto:helloiraakbar@gmail.com",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "National Institute of Fashion Technology, Gandhinagar",
+  },
+  knowsAbout: ["Product design", "Conversational design", "Voice AI", "AI workflow design", "UX design"],
   worksFor: {
     "@type": "Organization",
     name: "Hunar AI",
