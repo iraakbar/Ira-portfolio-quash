@@ -18,6 +18,18 @@ export type WorkItem = {
 
 export const work: WorkItem[] = [
   {
+    title: "Making complex voice AI feel like an everyday tool",
+    project: "Hunar Voice",
+    category: "End-to-End Product Design",
+    years: "2026",
+    company: "Hunar.ai",
+    brief:
+      "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
+    slug: "hunar-voice",
+    image: "/work/hunar-voice.webp",
+    imageAlt: "Hunar Voice self-serve campaign platform",
+  },
+  {
     title: "When apps are a barrier, conversation becomes the interface.",
     project: "Voice AI for Construction Workers",
     category: "Conversational Design",
@@ -30,16 +42,16 @@ export const work: WorkItem[] = [
     imageAlt: "Voice recruiter conversation flow for construction workers",
   },
   {
-    title: "Making complex voice AI feel like an everyday tool",
-    project: "Hunar Voice",
-    category: "End-to-End Product Design",
-    years: "2026",
+    title: "Making complex hiring workflows easier to run",
+    project: "Hunar Connect",
+    category: "Product Design",
+    years: "2025",
     company: "Hunar.ai",
     brief:
-      "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
-    slug: "hunar-voice",
-    image: "/work/hunar-voice.webp",
-    imageAlt: "Hunar Voice self-serve campaign platform",
+      "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 50+ clients.",
+    slug: "hunar-connect",
+    image: "/work/hunar-connect.webp",
+    imageAlt: "Hunar Connect hiring CRM",
   },
   {
     title: "Turning onboarding into a guided conversation",
@@ -64,18 +76,6 @@ export const work: WorkItem[] = [
     slug: "jiva",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
-  },
-  {
-    title: "Making complex hiring workflows easier to run",
-    project: "Hunar Connect",
-    category: "Product Design",
-    years: "2025",
-    company: "Hunar.ai",
-    brief:
-      "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 50+ clients.",
-    slug: "hunar-connect",
-    image: "/work/hunar-connect.webp",
-    imageAlt: "Hunar Connect hiring CRM",
   },
   {
     title: "Making data exploration feel as familiar as a spreadsheet",
