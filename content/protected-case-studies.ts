@@ -5,4 +5,6 @@
 
 export const protectedCaseStudies: Record<string, { title: string; file: string }> = {
   jiva: { title: "JIVA", file: "/case-studies/jiva.enc" },
+  apperture: { title: "Apperture", file: "/case-studies/apperture.enc" },
+  "bial-pulse": { title: "BIAL Pulse", file: "/case-studies/bial-pulse.enc" },
 };

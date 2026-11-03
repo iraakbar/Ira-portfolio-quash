@@ -93,7 +93,7 @@ export const work: WorkItem[] = [
     brief:
       "Users kept returning to Excel to work with their data. Working with the founders, I helped design a product analytics platform from the ground up, bringing query-building, data exploration and an AI assistant into a familiar, spreadsheet-style workspace.",
     slug: "apperture",
-    caseStudyUrl: "https://drive.google.com/file/d/1BYKv5iBkV2BtYchBSDGUr35c_qGMLa8_/view?usp=drive_link",
+    caseStudyUrl: "/case-study/apperture",
     image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
   },
@@ -106,7 +106,7 @@ export const work: WorkItem[] = [
     brief:
       "As spontaneous airport shopping declined after COVID, Bengaluru Airport needed new ways to connect flyers with its shops and offers. I contributed to research and design for its loyalty app, using modular, personalised experiences to help flyers discover what was relevant to them.",
     slug: "bial-pulse",
-    caseStudyUrl: "https://drive.google.com/file/d/1c7SsUEHLmZlnQivp46pqsRCpXpGV5FN5/view?usp=drive_link",
+    caseStudyUrl: "/case-study/bial-pulse",
     image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",
   },
