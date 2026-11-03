@@ -23,7 +23,7 @@ export default function ComingSoon() {
           Taking a little time to catch it up.
         </p>
         <p className="mx-auto mt-4 max-w-[560px] text-statement">
-          Happy to walk you / hiring managers through on call or coffee :)
+          Happy to walk you through on call or coffee :)
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-3">
           <a href={links.email} className="pill-button">
