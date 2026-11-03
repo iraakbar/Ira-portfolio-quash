@@ -80,7 +80,7 @@ export const work: WorkItem[] = [
     brief:
       "With cases piling up and limited time per hearing, finding the right information quickly mattered. I stepped into the unfamiliar world of the Karnataka High Court, researched how judges worked, and designed an AI assistant from the ground up to help them find and reference case-related documents during hearings.",
     slug: "jiva",
-    caseStudyUrl: "https://drive.google.com/file/d/1DyqGmG9LJ4KGmQW6wiQpyf6NL6wGJCtK/view?usp=drive_link",
+    caseStudyUrl: "/case-study/jiva",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
   },
