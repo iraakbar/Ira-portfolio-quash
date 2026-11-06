@@ -8,6 +8,8 @@ export type WorkItem = {
   category: string;
   years: string;
   company: string;
+  // Ira's role on the project, highlighted on the card.
+  role: string;
   brief: string;
   slug?: string;
   // Live product link, with its button label.
@@ -30,6 +32,7 @@ export const work: WorkItem[] = [
     brief:
       "Voice campaigns once ran through APIs operated by internal teams. I designed Hunar Voice from the ground up, shaping its brand identity, information architecture, core workflows and design library. Every decision helped turn a technical capability into a cohesive, self-serve product customers could comfortably use every day, as monthly calls grew from 3.1M to 11M.",
     slug: "hunar-voice",
+    role: "Lead Product Designer",
     externalUrl: "https://hunar.ai/sign-up",
     externalLabel: "Explore platform",
     image: "/work/hunar-voice.webp",
@@ -44,6 +47,7 @@ export const work: WorkItem[] = [
     brief:
       "Workers signed up but went no further. Language barriers, varying literacy levels and unfamiliar app flows stood between them and potential jobs. I designed a multilingual voice recruiter that understood their work preferences, suggested matching gigs, and checked availability and interest through conversation.",
     slug: "conversational-design",
+    role: "Forward Deployed Designer",
     caseStudyUrl: "/coming-soon",
     image: "/work/conversational-design.webp",
     imageAlt: "Voice recruiter conversation flow for construction workers",
@@ -57,6 +61,7 @@ export const work: WorkItem[] = [
     brief:
       "Hiring teams needed to manage candidates across AI assessments, CV matching and walk-in interviews. I designed connected workflows and reusable components that brought these tasks into one recruitment platform, used by 50+ clients.",
     slug: "hunar-connect",
+    role: "Lead Product Designer",
     caseStudyUrl: "/coming-soon",
     image: "/work/hunar-connect.webp",
     imageAlt: "Hunar Connect hiring CRM",
@@ -70,6 +75,7 @@ export const work: WorkItem[] = [
     brief:
       "With cases piling up and limited time per hearing, finding the right information quickly mattered. I stepped into the unfamiliar world of the Karnataka High Court, researched how judges worked, and designed an AI assistant from the ground up to help them find and reference case-related documents during hearings.",
     slug: "jiva",
+    role: "Jr. Product Designer",
     caseStudyUrl: "/case-study/jiva",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
@@ -83,6 +89,7 @@ export const work: WorkItem[] = [
     brief:
       "Users kept returning to Excel to work with their data. Working with the founders, I helped design a product analytics platform from the ground up, bringing query-building, data exploration and an AI assistant into a familiar, spreadsheet-style workspace.",
     slug: "apperture",
+    role: "Founding Designer",
     caseStudyUrl: "/case-study/apperture",
     image: "/work/apperture.webp",
     imageAlt: "Apperture spreadsheet-style data query interface",
@@ -96,6 +103,7 @@ export const work: WorkItem[] = [
     brief:
       "Packers stalled at different stages, from uploading documents to visiting the store. The app showed the process, but couldn't address what was holding each person back. I designed a sequence of voice agents that used each packer's progress and previous conversations to offer focused guidance at the right moment.",
     slug: "ai-workflow-design",
+    role: "Forward Deployed Designer",
     caseStudyUrl: "/coming-soon",
     image: "/work/ai-workflow-design.webp",
     imageAlt: "Voice agent follow-up workflow for candidate onboarding",
@@ -109,6 +117,7 @@ export const work: WorkItem[] = [
     brief:
       "As spontaneous airport shopping declined after COVID, Bengaluru Airport needed new ways to connect flyers with its shops and offers. I contributed to research and design for its loyalty app, using modular, personalised experiences to help flyers discover what was relevant to them.",
     slug: "bial-pulse",
+    role: "Jr. Product Designer",
     caseStudyUrl: "/case-study/bial-pulse",
     image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",
@@ -122,6 +131,7 @@ export const work: WorkItem[] = [
     brief:
       "I conceptualised and prototyped Kotak Neo's first AI feature, exploring how a chat assistant could help users navigate stocks and mutual funds. The proof of concept helped the team evaluate the experience and informed the feature's beta launch.",
     externalUrl: "https://neo.kotaksecurities.com/",
+    role: "Sr Design Consultant",
     externalLabel: "Download App",
     image: "/work/kotak-neo.webp",
     imageAlt: "Kotak Neo AI chat assistant",
