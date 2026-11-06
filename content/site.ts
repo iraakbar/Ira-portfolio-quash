@@ -82,16 +82,6 @@ export const testimonials: Testimonial[] = [
     photo: "/testimonials/himanshu-kalra.webp",
   },
   {
-    name: "Urvashi Soni",
-    role: "Principal Engineer, Hunar.ai",
-    linkedin: "https://www.linkedin.com/in/urvashi-soni-58262b56/",
-    quote: [
-      "Ira is exceptionally organised and attentive to detail, which makes her a great partner to engineering. She thinks through how an experience should behave and brings clarity to the decisions and details we need to build it well.",
-      "She has helped shape how design and engineering work together at Hunar, making collaboration smoother and easier for the team.",
-    ],
-    photo: "/testimonials/urvashi-soni.webp",
-  },
-  {
     name: "Ayush Srivastava",
     role: "Founder, Quash",
     linkedin: "https://www.linkedin.com/in/ayushshrivastavaa/",
