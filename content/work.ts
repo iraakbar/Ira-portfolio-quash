@@ -75,7 +75,7 @@ export const work: WorkItem[] = [
     brief:
       "With cases piling up and limited time per hearing, finding the right information quickly mattered. I stepped into the unfamiliar world of the Karnataka High Court, researched how judges worked, and designed an AI assistant from the ground up to help them find and reference case-related documents during hearings.",
     slug: "jiva",
-    role: "Jr. Product Designer",
+    role: "Product Designer",
     caseStudyUrl: "/case-study/jiva",
     image: "/work/jiva.webp",
     imageAlt: "JIVA legal research assistant interface",
@@ -117,7 +117,7 @@ export const work: WorkItem[] = [
     brief:
       "As spontaneous airport shopping declined after COVID, Bengaluru Airport needed new ways to connect flyers with its shops and offers. I contributed to research and design for its loyalty app, using modular, personalised experiences to help flyers discover what was relevant to them.",
     slug: "bial-pulse",
-    role: "Jr. Product Designer",
+    role: "Product Designer",
     caseStudyUrl: "/case-study/bial-pulse",
     image: "/work/bial-pulse.webp",
     imageAlt: "BIAL Pulse airport offers app",

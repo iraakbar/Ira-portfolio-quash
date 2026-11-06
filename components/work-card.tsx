@@ -18,7 +18,7 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         sizes="(min-width: 768px) 460px, 100vw"
       />
       <div>
-        <p className="mb-4 inline-flex rounded-full bg-ink px-3 py-1 text-[13px] font-medium text-paper">
+        <p className="mb-4 inline-flex rounded-full bg-line px-3 py-1 text-[13px] font-medium text-ink">
           Role: {item.role}
         </p>
         <h3 className={`text-title font-medium ${href ? "transition-colors group-hover:text-grey" : ""}`}>
