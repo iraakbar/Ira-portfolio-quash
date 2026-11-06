@@ -2,8 +2,7 @@ import Link from "next/link";
 import ImageSlot from "@/components/image-slot";
 import { type WorkItem, workHref } from "@/content/work";
 
-// One work item: the image at its original 4:3 shape with the copy beside it
-// (stacked on mobile). Links only when there is somewhere to go.
+// One work item: the image beside the copy on desktop, stacked above it on smaller screens. Links only when there is somewhere to go.
 export default function WorkCard({ item }: { item: WorkItem }) {
   const href = workHref(item);
   // External links and password-protected case studies open in a new tab, so the
@@ -15,7 +14,8 @@ export default function WorkCard({ item }: { item: WorkItem }) {
         src={item.image}
         alt={item.imageAlt}
         aspect="4/3"
-        sizes="(min-width: 768px) 460px, 100vw"
+        sizes="(min-width: 1024px) 520px, 100vw"
+        className="w-full lg:self-stretch"
       />
       <div>
         <p className="mb-4 inline-flex rounded-full bg-line px-3 py-1 text-[13px] font-medium text-ink">
@@ -40,7 +40,8 @@ export default function WorkCard({ item }: { item: WorkItem }) {
     </>
   );
 
-  const className = "group grid items-center gap-6 md:grid-cols-2 md:gap-10";
+  // Side by side from 1024px. The image stretches to the text's height (never below 4:3).
+  const className = "group grid gap-6 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-10";
 
   if (!href) return <article className={className}>{content}</article>;
   if (newTab) {
