@@ -1,43 +1,37 @@
-import CopyEmail from "@/components/copy-email";
+import About from "@/components/about";
+import Carousel from "@/components/carousel";
+import Footer from "@/components/footer";
+import Hero from "@/components/hero";
+import Nav from "@/components/nav";
+import Testimonials from "@/components/testimonials";
+import ViewAll from "@/components/view-all";
+import { elsewhere } from "@/content/site";
+import { visibleCount, work } from "@/content/work";
 
-// Temporary holding page while the new portfolio is finished.
-const resumeUrl = "/Ira-Akbar-Resume.pdf";
-
-const linkClass =
-  "text-xl font-medium underline decoration-1 underline-offset-[6px] transition-colors hover:text-grey md:text-2xl";
-
-export default function Holding() {
+export default function Home() {
   return (
-    <div className="flex min-h-[100svh] flex-col px-4 text-center md:px-12">
-      <header className="pt-8 md:pt-10">
-        <p className="text-xl font-semibold tracking-[-0.02em] md:text-2xl">Ira’s Portfolio</p>
-      </header>
+    <>
+      <Nav />
+      <main>
+        <Hero />
+        <Testimonials />
 
-      <main className="mx-auto flex max-w-[1100px] flex-1 flex-col items-center justify-center py-16">
-        <h1 className="text-[clamp(26px,3.6vw,40px)] font-medium leading-[1.15] tracking-[-0.03em]">
-          A designer redesigning her portfolio. Groundbreaking.
-        </h1>
-        <p className="mt-8 max-w-[580px] text-[clamp(17px,1.6vw,20px)] leading-[1.45] tracking-[-0.01em]">
-          Like everyone in my design community, I’ve let the work get ahead of the website. Taking
-          a little time to catch it up.
-        </p>
-        <div aria-hidden="true" className="mt-10 flex gap-3">
-          <span className="h-[14px] w-[14px] rounded-full bg-line" />
-          <span className="h-[14px] w-[14px] rounded-full bg-line" />
-          <span className="h-[14px] w-[14px] rounded-full bg-line" />
-        </div>
-        <p className="mt-10 max-w-[600px] text-[clamp(17px,1.6vw,20px)] leading-[1.45] tracking-[-0.01em]">
-          Until then, happy to walk you through what I’ve been building.{" "}
-          <br className="hidden md:inline" />
-          Over a call or a coffee, whichever you prefer.
-        </p>
-        <div className="mt-12 flex gap-12">
-          <CopyEmail className={linkClass} />
-          <a href={resumeUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
-            Resume
-          </a>
-        </div>
+        <section id="work" aria-labelledby="work-heading" className="page-x mt-[18vh] scroll-mt-8">
+          <h2 id="work-heading" className="section-title">
+            Work
+          </h2>
+          <ViewAll items={work} visibleCount={visibleCount} />
+        </section>
+
+        <About />
+        <Carousel
+          id="elsewhere"
+          heading={elsewhere.heading}
+          intro={elsewhere.intro}
+          items={elsewhere.items}
+        />
       </main>
-    </div>
+      <Footer />
+    </>
   );
 }

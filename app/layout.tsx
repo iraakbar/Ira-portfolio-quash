@@ -1,24 +1,71 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
+import { Instrument_Serif } from "next/font/google";
+import { googleSiteVerification, links, seo, siteUrl } from "@/content/site";
 import "./globals.css";
 
-const title = "Ira Akbar, Product Designer";
-const description =
-  "Like everyone in my design community, I've let the work get ahead of the website. Taking a little time to catch it up.";
+// Display serif for the hero headline only.
+const serif = Instrument_Serif({ weight: "400", subsets: ["latin"], variable: "--font-serif" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://iraakbar.com"),
-  title,
-  description,
+  metadataBase: new URL(siteUrl),
+  title: seo.title,
+  description: seo.description,
   alternates: { canonical: "/" },
-  openGraph: { type: "website", siteName: "Ira Akbar", title, description, url: "/" },
-  twitter: { card: "summary", title, description },
+  openGraph: {
+    type: "website",
+    siteName: "Ira Akbar",
+    title: seo.title,
+    description: seo.description,
+    url: "/",
+    locale: "en_IN",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: seo.title,
+    description: seo.description,
+  },
+  verification: googleSiteVerification
+    ? { google: googleSiteVerification }
+    : undefined,
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+const personJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Ira Akbar",
+  jobTitle: "Senior Product Designer",
+  description: seo.description,
+  url: siteUrl,
+  image: `${siteUrl}/avatar-ira.webp`,
+  email: "mailto:helloiraakbar@gmail.com",
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "National Institute of Fashion Technology, Gandhinagar",
+  },
+  knowsAbout: ["Product design", "Conversational design", "Voice AI", "AI workflow design", "UX design"],
+  worksFor: {
+    "@type": "Organization",
+    name: "Hunar AI",
+    url: links.hunar,
+  },
+  sameAs: [links.linkedin, links.instagram, links.youtube],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en" className={GeistSans.variable}>
-      <body className="font-sans">{children}</body>
+    <html lang="en" className={`${GeistSans.variable} ${serif.variable}`}>
+      <body className="font-sans">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
