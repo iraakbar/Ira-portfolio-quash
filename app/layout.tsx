@@ -65,7 +65,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
         {siteBanner && (
-          <p className="bg-wash px-4 py-2 text-center text-[13px] text-grey">{siteBanner}</p>
+          <p className="bg-ink px-4 py-3 text-center text-sm font-medium text-paper md:text-[15px]">{siteBanner}</p>
         )}
         {children}
       </body>
