@@ -33,7 +33,7 @@ export const hero = {
 };
 
 export const about = {
-  lead: "I'm leading product designer at Hunar AI.",
+  lead: "I'm leading product design at Hunar AI.",
   body: "Most days I'm also writing the prompts behind our voice agents, sitting on client calls, or working out why a conversation went quiet halfway through. I also make the content and comms that reach our users, and share what I learn on LinkedIn.",
   previouslyLabel: "previously at:",
   previously: ["Parallel", "Kotak Securities"],
