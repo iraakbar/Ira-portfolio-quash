@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { GeistSans } from "geist/font/sans";
 import { Instrument_Serif } from "next/font/google";
-import { googleSiteVerification, links, seo, siteUrl } from "@/content/site";
+import { googleSiteVerification, links, seo, siteBanner, siteUrl } from "@/content/site";
 import "./globals.css";
 
 // Display serif for the hero headline only.
@@ -64,6 +64,9 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
+        {siteBanner && (
+          <p className="bg-wash px-4 py-2 text-center text-[13px] text-grey">{siteBanner}</p>
+        )}
         {children}
       </body>
     </html>

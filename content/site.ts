@@ -14,6 +14,9 @@ export const links = {
   hunar: "https://www.hunar.ai/",
 };
 
+// Small notice shown at the very top of every page. Set to "" to hide it.
+export const siteBanner = "This portfolio isn't fully updated yet. I'm really trying to update it asap!";
+
 export const seo = {
   title: "Ira Akbar · Senior Product Designer | Hunar.ai",
   description:
